@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GBK"?>
+<ConvertManager>
+	<ConvertInformation name="ClassAToClassB" type="Class">
+  	<Type name1="ClassA" name2="ClassB" />
+	  <Property name1="PSA" name2="PSB" />
+	  <Property name1="PBA" name2="PBB" convert="BOOL"/>
+	</ConvertInformation>
+	<ConvertInformation name="BOOL" type="Value">
+    <Value val1="true" val2="1"/>
+    <Value val1="false" val2="0"/>
+  </ConvertInformation>
+</ConvertManager>
