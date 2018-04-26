@@ -4220,69 +4220,6 @@
             <param name="windowName">窗口名称</param>
             <param name="buttonName">按钮名称</param>
         </member>
-        <member name="T:Mock.Tools.Controls.HxDialog">
-            <summary>
-            表示航信定制的对话框对象
-            </summary>
-        </member>
-        <member name="M:Mock.Tools.Controls.HxDialog.Message">
-            <summary>
-            对话框中的描述信息
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Mock.Tools.Controls.HxDialog.Click(System.String)">
-            <summary>
-            点击对话框中指定名称的按钮
-            </summary>
-            <param name="buttonName">按钮名称</param>
-        </member>
-        <member name="M:Mock.Tools.Controls.HxDialog.Click(System.Boolean)">
-            <summary>
-            点击对话框中指定名称的按钮
-            </summary>
-            <param name="ok">按钮名称</param>
-        </member>
-        <member name="M:Mock.Tools.Controls.HxDialog.Exist(System.Int32)">
-            <summary>
-            检测指定窗体的子窗体中是否存在航信定制的对话框
-            </summary>
-            <param name="TimeOut">超时时间</param>
-            <returns></returns>
-        </member>
-        <member name="T:Mock.Tools.Controls.HxMessageBox">
-            <summary>
-            表示航信定制的消息框对象
-            </summary>
-        </member>
-        <member name="M:Mock.Tools.Controls.HxMessageBox.Close(System.String)">
-            <summary>
-            关闭消息框
-            </summary>
-            <param name="parentName">父窗体名称</param>
-        </member>
-        <member name="M:Mock.Tools.Controls.HxMessageBox.Exists(System.String,System.Int32)">
-            <summary>
-            检测指定窗体的子窗体中是否存在航信定制的消息框
-            </summary>
-            <param name="parentName">父窗体名称</param>
-            <param name="TimeOut">超时时间</param>
-            <returns></returns>
-        </member>
-        <member name="M:Mock.Tools.Controls.HxMessageBox.EventDescription(System.String)">
-            <summary>
-            消息框中的事件描述信息
-            </summary>
-            <param name="parentName">父窗体名称</param>
-            <returns>事件描述信息</returns>
-        </member>
-        <member name="M:Mock.Tools.Controls.HxMessageBox.Click(System.String,System.String)">
-            <summary>
-            点击消息框中的按钮
-            </summary>
-            <param name="buttonName">按钮名称</param>
-            <param name="parentName">父窗体名称</param>
-        </member>
         <member name="T:Mock.Tools.Controls.Keybord">
             <summary>
             表示键盘对象
@@ -4943,12 +4880,6 @@
             <param name="windowName"></param>
             <param name="waitMillionSecond"></param>
             <returns></returns>
-        </member>
-        <member name="M:Mock.Tools.Controls.WWindow.CloseTo(System.String)">
-            <summary>
-            关闭窗口到指定窗口
-            </summary>
-            <param name="windowName">窗口名称</param>
         </member>
         <member name="M:Mock.Tools.Controls.WWindow.Close(System.String)">
             <summary>

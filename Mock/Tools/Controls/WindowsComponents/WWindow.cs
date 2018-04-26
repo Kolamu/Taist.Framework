@@ -117,17 +117,6 @@
         }
 
         /// <summary>
-        /// 关闭窗口到指定窗口
-        /// </summary>
-        /// <param name="windowName">窗口名称</param>
-        public static void CloseTo(string windowName)
-        {
-            WindowObject windowObj = new WindowObject(windowName);
-            windowObj.CloseTo();
-            windowObj = null;
-        }
-
-        /// <summary>
         /// 关闭窗口
         /// </summary>
         /// <param name="windowName">窗口名称</param>

@@ -246,8 +246,6 @@
     <Compile Include="Tools\ControlObject\WindowsComponents\ComboBoxObject.cs" />
     <Compile Include="Tools\ControlObject\WindowsComponents\EditObject.cs" />
     <Compile Include="Tools\ControlObject\WindowsComponents\OpenSaveFileDialogObject.cs" />
-    <Compile Include="Tools\ControlObject\WindowsComponents\HxDialogObject.cs" />
-    <Compile Include="Tools\ControlObject\WindowsComponents\HxMessageBoxObject.cs" />
     <Compile Include="Tools\ControlObject\WindowsComponents\KeybordObject.cs" />
     <Compile Include="Tools\ControlObject\WindowsComponents\MenuBarObject.cs" />
     <Compile Include="Tools\ControlObject\WindowsComponents\MessageBoxObject.cs" />
@@ -280,8 +278,6 @@
     <Compile Include="Tools\Controls\WindowsComponents\WEdit.cs" />
     <Compile Include="Tools\Controls\WindowsComponents\WFileDownLoadWindow.cs" />
     <Compile Include="Tools\Controls\WindowsComponents\WOpenSaveFileDialog.cs" />
-    <Compile Include="Tools\Controls\WindowsComponents\HxDialog.cs" />
-    <Compile Include="Tools\Controls\WindowsComponents\HxMessageBox.cs" />
     <Compile Include="Tools\Controls\WindowsComponents\Keybord.cs" />
     <Compile Include="Tools\Controls\WindowsComponents\WMenuBar.cs" />
     <Compile Include="Tools\Controls\WindowsComponents\MonthCalender.cs" />

@@ -421,67 +421,6 @@
         {
             get
             {
-                //Dictionary<string, IntPtr> currentWindowDictionary = null;
-                //lock (_controlLock)
-                //{
-                //    if (_allWindowDictionary == null) return false;
-                //    currentWindowDictionary = new Dictionary<string, IntPtr>();
-                //    foreach (object key in _allWindowDictionary.Keys)
-                //    {
-                //        currentWindowDictionary.Add((string)key, (IntPtr)_allWindowDictionary[key]);
-                //    }
-                //}
-                //foreach (KeyValuePair<string, IntPtr> kv in currentWindowDictionary)
-                //{
-                //    if (NativeMethods.IsWindow(kv.Value) && NativeMethods.IsWindowVisible(kv.Value))
-                //    {
-                //        try
-                //        {
-                //            WindowsUnit element = AutomationElement.FromHandle(kv.Value);
-                //            if (Config.WarningWindowList.Contains(element.Current.AutomationId) || Config.WarningWindowList.Contains(element.Current.Name))
-                //            {
-                //                new System.Threading.Thread(() =>
-                //                    {
-                //                        try
-                //                        {
-                //                            string name = element.Current.Name;
-                //                            string type = element.Current.ClassName;
-                //                            string automationId = element.Current.AutomationId;
-                //                            string message = "Unknown";
-                //                            if (string.Equals(automationId, "SysMessageBox"))
-                //                            {
-                //                                name = "HxDialog";
-                //                                message = HxDialog.Message();
-                //                            }
-                //                            else if (string.Equals(automationId, "CustomMessageBox"))
-                //                            {
-                //                                name = "HxMessageBox";
-                //                                message = HxMessageBox.EventDescription();
-                //                            }
-                //                            else if (string.Equals(type, "#32770"))
-                //                            {
-                //                                message = WMessageBox.Message();
-                //                            }
-
-                //                            LogManager.Debug("Warning window info -> name : {0}, classname : {1}, message : {2}", name, type, message);
-                //                        }
-                //                        catch (Exception)
-                //                        {
-                //                            //LogManager.Error(ex);
-                //                        }
-                //                    }).Start();
-                //                return true;
-                //            }
-                //        }
-                //        catch(Exception ex)
-                //        {
-                //            LogManager.Error(ex);
-                //        }
-                //    }
-                //}
-                //return false;
-
-                //2017.09.04 修改方式
                 try
                 {
                     if (warningTable == null) return false;
@@ -507,36 +446,6 @@
                                     WindowsUnit element = AutomationElement.FromHandle(kv.Value);
                                     if (Config.WarningWindowList.Contains(element.Current.AutomationId) || Config.WarningWindowList.Contains(element.Current.Name))
                                     {
-                                        new System.Threading.Thread(() =>
-                                            {
-                                                try
-                                                {
-                                                    string name = element.Current.Name;
-                                                    string type = element.Current.ClassName;
-                                                    string automationId = element.Current.AutomationId;
-                                                    string message = "Unknown";
-                                                    if (string.Equals(automationId, "SysMessageBox"))
-                                                    {
-                                                        name = "HxDialog";
-                                                        message = HxDialog.Message();
-                                                    }
-                                                    else if (string.Equals(automationId, "CustomMessageBox"))
-                                                    {
-                                                        name = "HxMessageBox";
-                                                        message = HxMessageBox.EventDescription();
-                                                    }
-                                                    else if (string.Equals(type, "#32770"))
-                                                    {
-                                                        message = WMessageBox.Message();
-                                                    }
-
-                                                    LogManager.DebugFormat("Warning window info -> name : {0}, classname : {1}, message : {2}", name, type, message);
-                                                }
-                                                catch (Exception)
-                                                {
-                                                    //LogManager.Error(ex);
-                                                }
-                                            }).Start();
                                         return true;
                                     }
                                 }
@@ -671,40 +580,9 @@
                         if (Config.WarningWindowList.Contains(baseInfo.AutomationId) || Config.WarningWindowList.Contains(baseInfo.WindowName))
                         {
                             warningTable.Add(runtimeId);
-                            new System.Threading.Thread(() =>
-                            {
-                                try
-                                {
-                                    string name = baseInfo.WindowName;
-                                    string type = baseInfo.ClassName;
-                                    string automationId = baseInfo.AutomationId;
-                                    string message = "Unknown";
-                                    if (string.Equals(automationId, "SysMessageBox"))
-                                    {
-                                        name = "HxDialog";
-                                        message = HxDialog.Message();
-                                    }
-                                    else if (string.Equals(automationId, "CustomMessageBox"))
-                                    {
-                                        name = "HxMessageBox";
-                                        message = HxMessageBox.EventDescription();
-                                    }
-                                    else if (string.Equals(type, "#32770"))
-                                    {
-                                        message = WMessageBox.Message();
-                                    }
-
-                                    LogManager.DebugFormat("Warning window info -> name : {0}, classname : {1}, message : {2}", name, type, message);
-                                }
-                                catch (Exception)
-                                {
-                                    //LogManager.Error(ex);
-                                }
-                            }).Start();
                         }
                     }
-                    //watch.Stop();
-                    //LogManager.Debug(getString(watch.Elapsed));
+
                     return null;
                 }, true);
                 LogManager.End();
@@ -819,36 +697,6 @@
                         if (Config.WarningWindowList.Contains(baseInfo.AutomationId) || Config.WarningWindowList.Contains(baseInfo.WindowName))
                         {
                             warningTable.Add(runtimeId);
-                            new System.Threading.Thread(() =>
-                            {
-                                try
-                                {
-                                    string name = baseInfo.WindowName;
-                                    string type = baseInfo.ClassName;
-                                    string automationId = baseInfo.AutomationId;
-                                    string message = "Unknown";
-                                    if (string.Equals(automationId, "SysMessageBox"))
-                                    {
-                                        name = "HxDialog";
-                                        message = HxDialog.Message();
-                                    }
-                                    else if (string.Equals(automationId, "CustomMessageBox"))
-                                    {
-                                        name = "HxMessageBox";
-                                        message = HxMessageBox.EventDescription();
-                                    }
-                                    else if (string.Equals(type, "#32770"))
-                                    {
-                                        message = WMessageBox.Message();
-                                    }
-
-                                    LogManager.DebugFormat("Warning window info -> name : {0}, classname : {1}, message : {2}", name, type, message);
-                                }
-                                catch (Exception)
-                                {
-                                    //LogManager.Error(ex);
-                                }
-                            }).Start();
                         }
                         return null;
                     }, true);
@@ -894,42 +742,7 @@
                                     return null;
                                 }
                                 LogManager.DebugFormat("Remove window named {0}, friendlyName {1}", baseInfo.WindowName, baseInfo.FriendlyName);
-                                //if (NativeMethods.IsWindow(baseInfo.Handle))
-                                //{
-                                //    LogManager.Debug("Window not closed, wait 2000");
-                                //    bool flag = false;
-                                //    for (int i = 0; i < 4; i++)
-                                //    {
-                                //        if (!NativeMethods.IsWindow(baseInfo.Handle))
-                                //        {
-                                //            flag = true;
-                                //            break;
-                                //        }
-                                //        Robot.Recess(500);
-                                //    }
-                                //    if (flag)
-                                //    {
-                                //        LogManager.Debug("Remove window named {0}, friendlyName {1}", baseInfo.WindowName, baseInfo.FriendlyName);
-
-                                //        try
-                                //        {
-                                //            _allWindowDictionary.Remove(runtimeId);
-                                //        }
-                                //        catch { }
-                                //        try
-                                //        {
-                                //            _namedWindowDictionary.Remove(baseInfo.FriendlyName);
-                                //        }
-                                //        catch { }
-                                //        try
-                                //        {
-                                //            _windowBaseInfoDictionary.Remove(runtimeId);
-                                //        }
-                                //        catch { }
-                                //    }
-                                //}
-                                //else
-                                //{
+                                
                                 if(_latestWindow != null && string.Equals(_latestWindow.RuntimeId, runtimeId))
                                 {
                                     _latestWindow = null;
@@ -1246,7 +1059,6 @@
                 return handler();
             }
         }
-
 
         #region LastAction
 
