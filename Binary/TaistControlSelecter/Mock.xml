@@ -1,0 +1,5369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mock</name>
+    </assembly>
+    <members>
+        <member name="T:Mock.Data.Exception.ParameterIsNullException">
+            <summary>
+            属性为空异常
+            </summary>
+        </member>
+        <member name="T:Mock.TaistException">
+            <summary>
+            表示测试框架异常的基类
+            </summary>
+        </member>
+        <member name="T:Mock.RobotException">
+            <summary>
+            表示测试框架异常的基类，该类更名为TaistException，为了兼容旧版而存，后续可能会移除
+            </summary>
+        </member>
+        <member name="M:Mock.RobotException.#ctor(System.String)">
+            <summary>
+            构造异常类的新实例
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Mock.RobotException.#ctor">
+            <summary>
+            构造异常类的新实例
+            </summary>
+        </member>
+        <member name="M:Mock.RobotException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造异常类的新实例
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Mock.TaistException.#ctor(System.String)">
+            <summary>
+            构造异常类的新实例
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Mock.TaistException.#ctor">
+            <summary>
+            构造异常类的新实例
+            </summary>
+        </member>
+        <member name="M:Mock.TaistException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造异常类的新实例
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Mock.TaistException.#ctor(System.Exception)">
+            <summary>
+            构造异常类的新实例
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Mock.Data.Exception.ParameterIsNullException.#ctor(System.String)">
+            <summary>
+            构造属性为空异常的新实例
+            </summary>
+            <param name="propertyName">属性名称</param>
+        </member>
+        <member name="M:Mock.Data.FileFactory.ClearDirectory(System.String)">
+            <summary>
+            清空文件夹
+            </summary>
+            <param name="dirName">文件夹所在的路径</param>
+        </member>
+        <member name="T:Mock.Data.TaistProperty">
+            <summary>
+            表示数据属性对象
+            </summary>
+        </member>
+        <member name="T:Mock.Data.TaistType">
+            <summary>
+            表示数据属性对象
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Exception.UnknownIdentificationException">
+            <summary>
+            找不到数据异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.UnknownIdentificationException.#ctor(System.Int32)">
+            <summary>
+            构造找不到数据异常的新实例
+            </summary>
+        </member>
+        <member name="M:Mock.Data.CaseManager.SetReportDetail(Mock.Data.ReportDetail)">
+            <summary>
+            设置明细信息
+            </summary>
+            <param name="detail">明细信息，这通常为TestCasePool.SetDetailColumnName所设置的结构数据</param>
+        </member>
+        <member name="M:Mock.Data.CaseManager.SetDetailColumnName(System.String,System.String,System.Boolean)">
+            <summary>
+            设置明细信息内容中包含的项目名称
+            </summary>
+            <param name="displayName">明细信息显示名称</param>
+            <param name="tagName">明细信息简化名称（这通常是明细信息生成XML时的标签名称）</param>
+            <param name="state">指示该列内容是状态标志</param>
+        </member>
+        <member name="M:Mock.Data.CaseManager.ClearReportDetail">
+            <summary>
+            清除测试报告的明细信息
+            </summary>
+        </member>
+        <member name="T:Mock.Config">
+            <summary>
+            表示测试配置信息
+            </summary>
+        </member>
+        <member name="M:Mock.Config.getConfigValue(System.String)">
+            <summary>
+            获取配置项的值
+            </summary>
+            <param name="name">配置名称</param>
+            <returns>配置值</returns>
+        </member>
+        <member name="M:Mock.Config.setConfigValue(System.String,System.String)">
+            <summary>
+            设置配置项的值
+            </summary>
+            <param name="name">配置名称</param>
+            <param name="value">配置项的值</param>
+        </member>
+        <member name="P:Mock.Config.WorkingDirectory">
+            <summary>
+            主程序所在文件夹绝对路径
+            </summary>
+        </member>
+        <member name="P:Mock.Config.RepairCheckPoint">
+            <summary>
+            修复验证数据
+            </summary>
+        </member>
+        <member name="P:Mock.Config.ConcurrencyCount">
+            <summary>
+            并发执行数量
+            </summary>
+        </member>
+        <member name="P:Mock.Config.MaxMemoryUsage">
+            <summary>
+            软件最大内存占用
+            </summary>
+        </member>
+        <member name="P:Mock.Config.Debug">
+            <summary>
+            表示是否当前状态是否为debug状态
+            </summary>
+        </member>
+        <member name="P:Mock.Config.TargetProjectName">
+            <summary>
+            测试目标名称
+            </summary>
+        </member>
+        <member name="P:Mock.Config.SoftwareVersionDate">
+            <summary>
+            要测试的开票软件版本的日期
+            </summary>
+        </member>
+        <member name="P:Mock.Config.TimeOut">
+            <summary>
+            超时时间，通常设置为本次测试最大的等待时间
+            </summary>
+        </member>
+        <member name="P:Mock.Config.RedoCount">
+            <summary>
+            单次操作最大失败次数
+            </summary>
+        </member>
+        <member name="P:Mock.Config.MinExecutionTime">
+            <summary>
+            一条用例的最短执行时间
+            </summary>
+        </member>
+        <member name="P:Mock.Config.SoftwareProcessName">
+            <summary>
+            获取测试软件的进程名称
+            </summary>
+        </member>
+        <member name="P:Mock.Config.WarningWindowList">
+            <summary>
+            获取报警窗口的AutomaitionId属性
+            </summary>
+        </member>
+        <member name="P:Mock.Config.PrintImageDirectory">
+            <summary>
+            获取虚拟打印的图片保存位置
+            </summary>
+        </member>
+        <member name="P:Mock.Config.TaistServer">
+            <summary>
+            修改时钟服务器时间
+            </summary>
+        </member>
+        <member name="P:Mock.Config.ControlLibraryPath">
+            <summary>
+            对象库路径
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Attributes.BusinessMethodAttribute">
+            <summary>
+            表示业务方法特性
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Attributes.BusinessMethodAttribute.BusinessName">
+            <summary>
+            业务名称
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Attributes.BusinessMethodAttribute.Keywords">
+            <summary>
+            方法的关键字
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Attributes.BusinessMethodAttribute.SubKeyword">
+            <summary>
+            方法二级关键字
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Attributes.BusinessMethodAttribute.TargetPorject">
+            <summary>
+            方法二级关键字
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Attributes.BusinessMethodAttribute.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Attributes.BusinessMethodAttribute.Default">
+            <summary>
+            关键字的默认调用方法
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Attributes.FieldPropertyAttribute">
+            <summary>
+            标记类属性的特性
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Attributes.FieldPropertyAttribute.#ctor">
+            <summary>
+            构造标记类属性特性的新实例
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Attributes.FieldPropertyAttribute.#ctor(System.String,System.Boolean)">
+            <summary>
+            构造标记类属性特性的新实例
+            </summary>
+            <param name="pName"></param>
+            <param name="isAttribute"></param>
+        </member>
+        <member name="P:Mock.Data.Attributes.FieldPropertyAttribute.Name">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Attributes.FieldPropertyAttribute.isAttribute">
+            <summary>
+            属性是否标记为特性
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Attributes.FieldPropertyAttribute.isIgnore">
+            <summary>
+            属性是否输出
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Attributes.DataClassAttribute">
+            <summary>
+            标记数据类的特性
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Attributes.DataClassAttribute.#ctor">
+            <summary>
+            构造标记数据类特性的新实例
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Attributes.DataClassAttribute.#ctor(System.String)">
+            <summary>
+            构造标记数据类特性的新实例
+            </summary>
+            <param name="pName"></param>
+        </member>
+        <member name="P:Mock.Data.Attributes.DataClassAttribute.Name">
+            <summary>
+            数据类名称
+            </summary>
+        </member>
+        <member name="T:Mock.Data.ConvertManager">
+            <summary>
+            提供类之间转换的类
+            </summary>
+        </member>
+        <member name="M:Mock.Data.ConvertManager.#ctor(System.String)">
+            <summary>
+            构造数据转换类的新实例
+            </summary>
+            <param name="xmlPath">记录了转换规则的XML文件名</param>
+        </member>
+        <member name="T:Mock.Data.Exception.PrimaryKeyIsNullException">
+            <summary>
+            属性为空异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.PrimaryKeyIsNullException.#ctor(System.String)">
+            <summary>
+            构造属性为空异常的新实例
+            </summary>
+            <param name="primaryKeyName">属性名称</param>
+        </member>
+        <member name="T:Mock.Data.Exception.InvalidDataAssemblyFileException">
+            <summary>
+            数据定义程序集文件非法异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.InvalidDataAssemblyFileException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造数据定义程序集文件非法异常的新实例
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Exception.PrimaryKeyNotExistException">
+            <summary>
+            属性为空异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.PrimaryKeyNotExistException.#ctor(System.String)">
+            <summary>
+            构造属性为空异常的新实例
+            </summary>
+            <param name="tableName">属性名称</param>
+        </member>
+        <member name="T:Mock.Data.Cache">
+            <summary>
+            缓存对象类(测试实际数据)
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Cache.setProperty(System.String,System.String)">
+            <summary>
+            设置属性值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Mock.Data.Cache.setProperty(System.Xml.XmlNode)">
+            <summary>
+            设置属性值
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:Mock.Data.Cache.getProperty">
+            <summary>
+            获取属性值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mock.Data.Cache.Bh">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Cache.SelectCondition">
+            <summary>
+            检索条件
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Cache.Position">
+            <summary>
+            检索条件
+            </summary>
+        </member>
+        <member name="P:Mock.Data.Cache.Item(System.String)">
+            <summary>
+            获取Cache内容
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Data.IFormatData">
+            <summary>
+            表示自动化测试数据接口
+            </summary>
+        </member>
+        <member name="M:Mock.Data.IFormatData.FromXml(System.Xml.XmlNode,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            从格式文档中获取数据，格式文档对应的数据类型必须继承此接口
+            </summary>
+            <param name="doc">格式文档数据中对应的XmlDocument对象</param>
+            <param name="condition">查询数据的条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.IFormatData.ToXml">
+            <summary>
+            将数据转化为Xml格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.IFormatData.Init">
+            <summary>
+            数据赋值后执行的初始化操作
+            </summary>
+        </member>
+        <member name="M:Mock.Data.IFormatData.GetProcessedValue(System.String,Mock.Data.universal,Mock.Data.universal)">
+            <summary>
+            获取处理后的数据
+            </summary>
+            <param name="propertyName">字段名称</param>
+            <param name="originalValue">字段原始值</param>
+            <param name="processedValue">处理后的字段值</param>
+            <returns>如果原始值来自输入数据，返回原始值，否则，返回处理后的值</returns>
+        </member>
+        <member name="M:Mock.Data.IFormatData.getUserConfig(System.String,System.String)">
+            <summary>
+            获取用户配置中的数据项
+            </summary>
+            <param name="name">数据项名称</param>
+            <param name="xpath">//Fpj[Zl='0']</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.IFormatData.setUserConfig(System.String,System.String,System.String)">
+            <summary>
+            设置用户配置数据项
+            </summary>
+            <param name="name">配置项名称</param>
+            <param name="value">配置项值</param>
+            <param name="xpath"></param>
+        </member>
+        <member name="P:Mock.Data.IFormatData.Bh">
+            <summary>
+            数据编号
+            </summary>
+        </member>
+        <member name="P:Mock.Data.IFormatData.RelateDataBh">
+            <summary>
+            关联数据的编号
+            </summary>
+        </member>
+        <member name="P:Mock.Data.IFormatData.DefaultDataBh">
+            <summary>
+            参考数据编号
+            </summary>
+        </member>
+        <member name="P:Mock.Data.IFormatData.UserDataName">
+            <summary>
+            用户配置数据路径，通常为Taist.Lib\Data\User目录下存放数据的文件名
+            </summary>
+        </member>
+        <member name="P:Mock.Data.IFormatData.InputNode">
+            <summary>
+            设置用户输入的数据节点
+            </summary>
+        </member>
+        <member name="P:Mock.Data.CheckPoint.IsStrict">
+            <summary>
+            精准比对
+            </summary>
+        </member>
+        <member name="P:Mock.Data.CheckPoint.IsNegative">
+            <summary>
+            反向比对
+            </summary>
+        </member>
+        <member name="P:Mock.Data.CheckPoint.CheckType">
+            <summary>
+            比对类型
+            </summary>
+        </member>
+        <member name="P:Mock.Data.DbData.Data">
+            <summary>
+            所有的数据库数据对象
+            </summary>
+        </member>
+        <member name="P:Mock.Data.DbData.SourceTableName">
+            <summary>
+            源数据表名称
+            </summary>
+        </member>
+        <member name="P:Mock.Data.DbData.SourceOwner">
+            <summary>
+            源数据表所在数据库信息名称
+            </summary>
+        </member>
+        <member name="P:Mock.Data.DbData.TargetTableName">
+            <summary>
+            目标数据表名称
+            </summary>
+        </member>
+        <member name="P:Mock.Data.DbData.TargetOwner">
+            <summary>
+            目标数据表所在数据库信息名称
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Exception.InvalidDataBhException">
+            <summary>
+            数据编号异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.InvalidDataBhException.#ctor(System.String)">
+            <summary>
+            构造数据编号异常类的新实例
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Mock.Data.Exception.InvalidParamValueException">
+            <summary>
+            表示参数输入错误异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.InvalidParamValueException.#ctor(System.String,System.String)">
+            <summary>
+            构造参数输入错误异常的新实例
+            </summary>
+            <param name="methodName"></param>
+            <param name="paramName"></param>
+        </member>
+        <member name="M:Mock.Data.Exception.InvalidParamValueException.#ctor(System.String)">
+            <summary>
+            构造参数输入错误异常的新实例
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Mock.Data.Exception.NotSetAffirmativelySettingItemException">
+            <summary>
+            未设置必选项参数异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.NotSetAffirmativelySettingItemException.#ctor(System.String)">
+            <summary>
+            构造未设置必选项参数异常的新实例
+            </summary>
+            <param name="itemName"></param>
+        </member>
+        <member name="T:Mock.Data.Exception.CanNotFindKeywordException">
+            <summary>
+            找不到关键字异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.CanNotFindKeywordException.#ctor(System.String)">
+            <summary>
+            构造找不到关键字异常的新实例
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.CanNotFindKeywordException.#ctor(System.String,System.String)">
+            <summary>
+            构造找不到关键字异常的新实例
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Exception.CanNotFindPropertyException">
+            <summary>
+            找不到数据异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.CanNotFindPropertyException.#ctor(System.String,System.String)">
+            <summary>
+            构造找不到数据异常的新实例
+            </summary>
+        </member>
+        <member name="M:Mock.Data.IniFile.GetValue(System.String,System.String)">
+            <summary>
+            Get section key value
+            </summary>
+            <param name="section"></param>
+            <param name="keyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.IniFile.SetValue(System.String,System.String,System.String)">
+            <summary>
+            Write key value to section
+            </summary>
+            <param name="section"></param>
+            <param name="keyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:Mock.Data.IniFile.Path">
+            <summary>
+            ini file full path
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Keyword.Invoke(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            执行该关键字
+            </summary>
+            <param name="bhs"></param>
+            <param name="paramDic"></param>
+        </member>
+        <member name="T:Mock.Data.universal">
+            <summary>
+            通用数据类型
+            </summary>
+        </member>
+        <member name="T:Mock.Data.TaistAssembly">
+            <summary>
+            表示数据属性对象
+            </summary>
+        </member>
+        <member name="M:Mock.Data.XmlFactory.LoadXml(System.String)">
+            <summary>
+            加载XML文件/XML格式字符串到XmlDocument
+            </summary>
+            <param name="arg">XML文件路径/XML格式字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.XmlFactory.HasChild(System.Xml.XmlNode)">
+            <summary>
+            判断XML是否含有子节点
+            </summary>
+            <param name="xn"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Mock.Data.XmlFactory.XmlRootString">
+            <summary>
+            所有XML数据的
+            </summary>
+        </member>
+        <member name="T:Mock.LogManager">
+            <summary>
+            自动化测试框架日志管理类
+            </summary>
+        </member>
+        <member name="M:Mock.LogManager.Debug(System.String)">
+            <summary>
+            打印调试日志
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Mock.LogManager.DebugFormat(System.String,System.Object[])">
+            <summary>
+            打印调试日志
+            </summary>
+            <param name="stringPattern"></param>
+            <param name="objs"></param>
+        </member>
+        <member name="M:Mock.LogManager.Debug(System.String,System.Int32)">
+            <summary>
+            打印调试日志
+            </summary>
+            <param name="message"></param>
+            <param name="depth"></param>
+        </member>
+        <member name="M:Mock.LogManager.Debug(Mock.Tools.Controls.WindowsUnit,System.String)">
+            <summary>
+            打印调试日志
+            </summary>
+            <param name="unit"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Mock.LogManager.Error(Mock.TaistException)">
+            <summary>
+            打印错误日志
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Mock.LogManager.Error(System.Exception)">
+            <summary>
+            打印错误日志
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Mock.LogManager.Error(System.String,System.Object[])">
+            <summary>
+            打印错误日志
+            </summary>
+            <param name="pattern"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Mock.LogManager.ErrorOnlyPrint(System.Exception)">
+            <summary>
+            打印错误日志
+            </summary>
+            <param name="printException"></param>
+        </member>
+        <member name="M:Mock.LogManager.Warning(System.String)">
+            <summary>
+            打印警告日志
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Mock.LogManager.Message(System.String,System.Object[])">
+            <summary>
+            打印消息日志
+            </summary>
+            <param name="pattern"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Mock.LogManager.DebugX(System.String,System.Object[])">
+            <summary>
+            打印调试日志
+            </summary>
+            <param name="stringPattern"></param>
+            <param name="objs"></param>
+        </member>
+        <member name="T:Mock.Nature.DataBase.Dao">
+            <summary>
+            Database operation class base class
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.DataBase.IOwner">
+            <summary>
+            表示数据库表所属的数据库的信息
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.Dao.Select(System.String)">
+            <summary>
+            查询数据库表数据
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.Dao.SelectSingle">
+            <summary>
+            查询数据库表数据
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.Dao.Update(System.String)">
+            <summary>
+            将数据更新到数据库表中
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.Dao.Insert">
+            <summary>
+            将数据插入到数据库表中
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.Dao.Delete(System.String)">
+            <summary>
+            删除数据库表中的数据
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.Dao.DeleteAll(System.String)">
+            <summary>
+            删除该表的所有数据
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.Dao.SetColumnValue(System.String,System.String)">
+            <summary>
+            设置数据库表列值
+            </summary>
+            <param name="columnName">数据库表列名</param>
+            <param name="columnValue">数据库表列值</param>
+        </member>
+        <member name="M:Mock.Nature.DataBase.Dao.GetColumnValue(System.String)">
+            <summary>
+            获取数据库表列值
+            </summary>
+            <param name="columnName">数据库表列名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.Dao.Clone">
+            <summary>
+            克隆一个对象的副本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.Dao.Next">
+            <summary>
+            获取下一个查询结果值，结果存储在当前实例中
+            </summary>
+            <returns>存在下一个结果值，返回true，反之，返回false</returns>
+        </member>
+        <member name="P:Mock.Nature.DataBase.Dao.ConnectionString">
+            <summary>
+            设置连接字符串
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.Dao.ResultString">
+            <summary>
+            返回查询数据的查询结果
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.Dao.DataBase">
+            <summary>
+            默认的数据库连接
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.DataBase.DataBase">
+            <summary>
+            表示数据库对象
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.DataBase.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Create a database object
+            </summary>
+            <param name="DBName"></param>
+            <param name="UserName"></param>
+            <param name="PassWord"></param>
+            <param name="Host"></param>
+            <param name="Port"></param>
+        </member>
+        <member name="M:Mock.Nature.DataBase.DataBase.Connect(Mock.Nature.DataBase.DataBaseType)">
+            <summary>
+            Connect to database
+            </summary>
+            <param name="Type">Database type</param>
+        </member>
+        <member name="M:Mock.Nature.DataBase.DataBase.Close">
+            <summary>
+            Close database
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.DataBase.ExecuteNoneQuery(System.String)">
+            <summary>
+            Execute sql with none result
+            </summary>
+            <param name="sql"></param>
+        </member>
+        <member name="M:Mock.Nature.DataBase.DataBase.ExecuteQuery(System.String)">
+            <summary>
+            Execute sql with a result
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.DataBase.GetColumnNames(System.String)">
+            <summary>
+            Get all column's name which in table named <code>TableName</code>
+            </summary>
+            <param name="TableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.DataBase.GetPrimaryKeyInfo(System.String)">
+            <summary>
+            Get all primary key's infomation which in table named <code>TableName</code>
+            </summary>
+            <param name="TableName">table name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.DataBase.GetPrimaryKeyName(System.String)">
+            <summary>
+            Get all primary key's name which in table named <code>TableName</code>
+            </summary>
+            <param name="TableName">table name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.DataBase.GetTableNames">
+            <summary>
+            Get all table name's name in this database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mock.Nature.DataBase.DataBase.UserName">
+            <summary>
+            Database username
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.DataBase.PassWord">
+            <summary>
+            Database password
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.DataBase.Host">
+            <summary>
+            Database host
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.DataBase.Port">
+            <summary>
+            Database port
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.DataBase.DataBaseName">
+            <summary>
+            Database name
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.DataBase.IsOpen">
+            <summary>
+            Check database opened
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.IDb.Open">
+            <summary>
+            Open database
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.IDb.Close">
+            <summary>
+            Close database
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.IDb.ExecuteNoneQuery(System.String)">
+            <summary>
+            Execute SQL but not return result
+            </summary>
+            <param name="sql"></param>
+        </member>
+        <member name="M:Mock.Nature.DataBase.IDb.ExecuteQuery(System.String)">
+            <summary>
+            Execute SQL and return result
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.IDb.GetColumnNames(System.String)">
+            <summary>
+            Get all column's name which in table named <code>TableName</code>
+            </summary>
+            <param name="TableName">table name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.IDb.GetColumnInfo(System.String)">
+            <summary>
+            Get all column's infomation which in table named <code>TableName</code>
+            </summary>
+            <param name="TableName">table name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.IDb.GetPrimaryKeyInfo(System.String)">
+            <summary>
+            Get all primary key's info which in table named <code>TableName</code>
+            </summary>
+            <param name="TableName">table name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.IDb.GetPrimaryKeyName(System.String)">
+            <summary>
+            Get all primary key's name which in table named <code>TableName</code>
+            </summary>
+            <param name="TableName">table name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.IDb.GetTableNames">
+            <summary>
+            Get all table name's name in this database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mock.Nature.DataBase.IDb.UserName">
+            <summary>
+            Database username
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.IDb.PassWord">
+            <summary>
+            Database password
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.IDb.Host">
+            <summary>
+            Database host
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.IDb.Port">
+            <summary>
+            Database port
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.IDb.DataBaseName">
+            <summary>
+            Database name
+            </summary>
+        </member>
+        <member name="M:Mock.Data.WebElementInfo.#ctor">
+            <summary>
+            构造新对象
+            </summary>
+        </member>
+        <member name="M:Mock.Data.WebElementInfo.setProperty(System.Xml.XmlNode)">
+            <summary>
+            设置属性值
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:Mock.Data.WebElementInfo.setProperty(System.String,System.String)">
+            <summary>
+            设置属性值
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Mock.Data.WebElementInfo.getProperty">
+            <summary>
+            获取属性值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mock.Data.WebElementInfo.FriendlyName">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebElementInfo.Inherit">
+            <summary>
+            继承属性
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebElementInfo.elementId">
+            <summary>
+            控件ID
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebElementInfo.TagName">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebElementInfo.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebElementInfo.Attributes">
+            <summary>
+            属性字典
+            </summary>
+        </member>
+        <member name="M:Mock.Data.WebInfo.#ctor">
+            <summary>
+            构造对象
+            </summary>
+        </member>
+        <member name="M:Mock.Data.WebInfo.FromXml(System.Xml.XmlNode,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            从格式文档中获取数据
+            </summary>
+            <param name="doc"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.WebInfo.ToXml">
+            <summary>
+            将数据转化为Xml格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.WebInfo.AddElementInfo(Mock.Data.WebElementInfo)">
+            <summary>
+            添加子控件的描述
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:Mock.Data.WebInfo.GetElementInfo">
+            <summary>
+            获取子控件的描述
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mock.Data.WebInfo.Bh">
+            <summary>
+            编号，此处等同于FriendlyName
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebInfo.id">
+            <summary>
+            Id号
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebInfo.FriendlyName">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebInfo.Name">
+            <summary>
+            实际名称
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebInfo.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebInfo.ElementInfo">
+            <summary>
+            控件集合
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WebInfo.Version">
+            <summary>
+            版本标识
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Exception.SearchConditionIsNullException">
+            <summary>
+            表示查询条件为空异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.SearchConditionIsNullException.#ctor(System.String)">
+            <summary>
+            构造查询条件为空异常的一个新实例
+            </summary>
+            <param name="sName">查询的数据名称</param>
+        </member>
+        <member name="M:Mock.Data.ReportDetail.SetResult(System.Boolean)">
+            <summary>
+            设置执行结果
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:Mock.Data.ReportDetail.Set(System.String,System.String)">
+            <summary>
+            设置结果信息
+            </summary>
+            <param name="detailName">报告明细的名称，这通常为TestCasePool.SetDetailColumnName中的tagName参数</param>
+            <param name="detailValue">报告的明细信息</param>
+        </member>
+        <member name="M:Mock.Data.ReportDetail.Set(System.String,Mock.Data.ReportResult)">
+            <summary>
+            设置结果信息
+            </summary>
+            <param name="detailName">报告明细的名称，这通常为TestCasePool.SetDetailColumnName中的tagName参数</param>
+            <param name="detailValue">报告的明细信息</param>
+        </member>
+        <member name="M:Mock.Data.ReportDetail.Get(System.String)">
+            <summary>
+            获取明细信息
+            </summary>
+            <param name="detailName">报告明细的名称，这通常为TestCasePool.SetDetailColumnName中的tagName参数</param>
+            <returns>detailValue</returns>
+        </member>
+        <member name="P:Mock.Data.ReportDetail.Result">
+            <summary>nz
+            执行结果
+            </summary>
+        </member>
+        <member name="T:Mock.Data.TestCase">
+            <summary>
+            表示测试用例对象
+            </summary>
+        </member>
+        <member name="T:Mock.Data.TestCasePool">
+            <summary>
+            表示测试用例集对象
+            </summary>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.GetDataNode(System.String)">
+            <summary>
+            获取测试数据节点
+            </summary>
+            <param name="bh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.GetCaseNode(System.String)">
+            <summary>
+            获取测试用例节点
+            </summary>
+            <param name="bh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.GetCheckNode(System.String,System.String)">
+            <summary>
+            获取测试验证点节点
+            </summary>
+            <param name="bh"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.Break(System.String)">
+            <summary>
+            退出当前测试
+            </summary>
+            <param name="message">推出原因</param>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.GetData``1(System.String)">
+            <summary>
+            获取指定编号的数据
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="bh">数据编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.GetData(System.String)">
+            <summary>
+            获取指定编号的数据
+            </summary>
+            <param name="bh">数据编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.GetTestCase(System.String)">
+            <summary>
+            获取用例数据
+            </summary>
+            <param name="bh">用例编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.GetCheckPoint(System.String,System.String)">
+            <summary>
+            获取验证点数据
+            </summary>
+            <param name="bh">数据编号</param>
+            <param name="target">目标平台</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.Initilize(System.String)">
+            <summary>
+            执行用例前的初始化信息
+            </summary>
+            <param name="filePath">选取的用例编号数据</param>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.Clear">
+            <summary>
+            清除所有测试用例
+            </summary>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.AddTestCase(Mock.Data.TestCase)">
+            <summary>
+            使用代码添加测试用例
+            </summary>
+            <param name="testCase"></param>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.Execute">
+            <summary>
+            执行所有测试用例，生成测试结果
+            </summary>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.SetReportDetail(Mock.Data.ReportDetail)">
+            <summary>
+            设置明细信息
+            </summary>
+            <param name="detail">明细信息，这通常为TestCasePool.SetDetailColumnName所设置的结构数据</param>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.SetDetailColumnName(System.String,System.String,System.Boolean)">
+            <summary>
+            设置明细信息内容中包含的项目名称
+            </summary>
+            <param name="displayName">明细信息显示名称</param>
+            <param name="tagName">明细信息简化名称（这通常是明细信息生成XML时的标签名称）</param>
+            <param name="state">指示该列内容是状态标志</param>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.InitCase">
+            <summary>
+            加载所有测试用例信息
+            </summary>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.InitTemp">
+            <summary>
+            初始化缓存文件
+            </summary>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.InitData">
+            <summary>
+            加载测试数据信息
+            </summary>
+        </member>
+        <member name="M:Mock.Data.TestCasePool.InitCheck">
+            <summary>
+            加载预期结果数据信息
+            </summary>
+        </member>
+        <member name="T:Mock.Data.ElementInfo">
+            <summary>
+            表示对象库中对控件的描述结构对象
+            </summary>
+        </member>
+        <member name="M:Mock.Data.ElementInfo.#ctor">
+            <summary>
+            构造新对象
+            </summary>
+        </member>
+        <member name="P:Mock.Data.ElementInfo.id">
+            <summary>
+            Id号
+            </summary>
+        </member>
+        <member name="P:Mock.Data.ElementInfo.FriendlyName">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:Mock.Data.ElementInfo.Inherit">
+            <summary>
+            继承属性
+            </summary>
+        </member>
+        <member name="P:Mock.Data.ElementInfo.Name">
+            <summary>
+            实际名称
+            </summary>
+        </member>
+        <member name="P:Mock.Data.ElementInfo.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Mock.Data.ElementInfo.AutomationId">
+            <summary>
+            控件唯一标识
+            </summary>
+        </member>
+        <member name="P:Mock.Data.ElementInfo.RelativePosition">
+            <summary>
+            控件相对窗口位置
+            </summary>
+        </member>
+        <member name="P:Mock.Data.ElementInfo.RelativePath">
+            <summary>
+            控件相对窗口的路径
+            </summary>
+        </member>
+        <member name="P:Mock.Data.ElementInfo.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="T:Mock.Data.VerInfo">
+            <summary>
+            表示对象库中描述版本信息结构对象
+            </summary>
+        </member>
+        <member name="M:Mock.Data.VerInfo.#ctor">
+            <summary>
+            构造版本信息的新实例
+            </summary>
+        </member>
+        <member name="M:Mock.Data.VerInfo.FromXml(System.Xml.XmlNode,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            从格式文档中获取数据
+            </summary>
+            <param name="doc"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Mock.Data.VerInfo.VerId">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:Mock.Data.VerInfo.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:Mock.Data.VerInfo.EndDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="P:Mock.Data.VerInfo.Bh">
+            <summary>
+            编号，此处等同于VerId
+            </summary>
+        </member>
+        <member name="T:Mock.Data.WinInfo">
+            <summary>
+            表示对象库中描述窗口的结构对象
+            </summary>
+        </member>
+        <member name="M:Mock.Data.WinInfo.#ctor">
+            <summary>
+            构造对象
+            </summary>
+        </member>
+        <member name="M:Mock.Data.WinInfo.FromXml(System.Xml.XmlNode,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            从格式文档中获取数据
+            </summary>
+            <param name="doc"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.WinInfo.ToXml">
+            <summary>
+            将数据转化为Xml格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.WinInfo.AddElementInfo(Mock.Data.ElementInfo)">
+            <summary>
+            添加子控件的描述
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:Mock.Data.WinInfo.GetElementInfo">
+            <summary>
+            获取子控件的描述
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mock.Data.WinInfo.Bh">
+            <summary>
+            编号，此处等同于FriendlyName
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WinInfo.id">
+            <summary>
+            Id号
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WinInfo.FriendlyName">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WinInfo.Name">
+            <summary>
+            实际名称
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WinInfo.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WinInfo.AutomationId">
+            <summary>
+            窗口唯一标识
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WinInfo.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WinInfo.ElementInfo">
+            <summary>
+            控件集合
+            </summary>
+        </member>
+        <member name="P:Mock.Data.WinInfo.Version">
+            <summary>
+            版本标识
+            </summary>
+        </member>
+        <member name="T:Mock.Data.DataFactory">
+            <summary>
+            表示自动化测试数据工厂对象
+            </summary>
+        </member>
+        <member name="M:Mock.Data.DataFactory.SaveKeyWord(System.Reflection.Assembly)">
+            <summary>
+            获取所有关键字
+            </summary>
+            <param name="assembly"></param>
+        </member>
+        <member name="M:Mock.Data.DataFactory.SaveDataAssemblyType(System.Reflection.Assembly)">
+            <summary>
+            存储数据类的类信息
+            </summary>
+            <param name="assembly"></param>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GetFormatedValue(System.String,System.Object)">
+            <summary>
+            获取预配置中的格式化数据
+            </summary>
+            <param name="keyName"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.CopyObject``1(``0)">
+            <summary>
+            深拷贝一个对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.CopyObject``1(``0,``0@)">
+            <summary>
+            深拷贝一个对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GetXmlConditionString(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            将<c>Dictionary</c>类型转化为<c>string</c>类型
+            </summary>
+            <param name="typeName"></param>
+            <param name="conditions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.XmlToObject``1(System.Xml.XmlNode,``0)">
+            <summary>
+            按照格式化数据格式实例化对应类型的实例
+            </summary>
+            <typeparam name="T">格式化数据对应的类型</typeparam>
+            <param name="node">格式化数据</param>
+            <param name="instance">对应类型的实例的初始值</param>
+            <returns>对应类型的实例</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.XmlToObject(System.Xml.XmlNode,System.Type)">
+            <summary>
+            按照格式化数据格式实例化对应类型的实例
+            </summary>
+            <param name="objectNode">格式化数据</param>
+            <param name="objectType">格式化数据对应的类型</param>
+            <returns>对应类型的实例</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.XmlToObject(System.Xml.XmlNode,System.Object)">
+            <summary>
+            按照格式化数据格式实例化对应类型的实例
+            </summary>
+            <param name="objectNode">格式化数据</param>
+            <param name="instance">格式化数据对应的类型</param>
+            <returns>对应类型的实例</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.XmlToObject``1(System.String)">
+            <summary>
+            按照格式化数据格式实例化对应类型的实例
+            </summary>
+            <typeparam name="T">格式化数据类型</typeparam>
+            <param name="bh">格式化数据的编号</param>
+            <returns>对应类型的实例</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.XmlToObject(System.Xml.XmlNode,Mock.Data.TaistType)">
+            <summary>
+            获取数据基础方法
+            </summary>
+            <param name="objectXmlNode"></param>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.ObjectToXml(System.Object,System.Boolean)">
+            <summary>
+            将数据实例转化为格式化的数据
+            </summary>
+            <param name="instance"></param>
+            <param name="inherit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.ObjectToXml(System.Object,System.String)">
+            <summary>
+            将数据实例转化为格式化的数据
+            </summary>
+            <param name="instance"></param>
+            <param name="dataTemplate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.Compare(System.Object,System.Object,System.Boolean)">
+            <summary>
+            比较两个数据是否相同(该函数只比对基本数据类型及string类型的属性)
+            </summary>
+            <param name="obj1">比较对象1</param>
+            <param name="obj2">比较对象2</param>
+            <param name="isNegative">反向比对</param>
+            <returns>比对结果</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GetData``1">
+            <summary>
+            获取数据的默认数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GetData``1(System.Xml.XmlNode)">
+            <summary>
+            获取指定类型的数据对象实例
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="node">数据所在的XmlDocument实例</param>
+            <returns>指定类型数据的对象实例</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GetData``1(System.Xml.XmlNode,System.String)">
+            <summary>
+            获取指定类型的数据对象实例
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="doc">数据所在的XmlDocument实例</param>
+            <param name="bh">数据编号</param>
+            <returns>指定类型数据的对象实例</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GetData``1(System.Xml.XmlNode,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            获取指定类型的数据对象实例
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="objNode">数据的Xml格式文档</param>
+            <param name="args">构造方法的参数</param>
+            <returns>指定类型数据的对象实例</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.CreateInstance``1">
+            <summary>
+            创建一个类的实例
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.CreateInstance(System.Type)">
+            <summary>
+            创建一个类的实例
+            </summary>
+            <param name="interfaceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.ReadLibrary(System.String,System.String)">
+            <summary>
+            从库文件中读取数据内容
+            </summary>
+            <param name="FileName">文件名（包含路径）</param>
+            <param name="ContentName">数据名称</param>
+            <returns>数据内容</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.WriteLibrary(System.String,System.String,System.String)">
+            <summary>
+            将数据内容写入指定库文件
+            </summary>
+            <param name="FileName">文件名（包含路径）</param>
+            <param name="ContentName">数据名称</param>
+            <param name="data">数据内容</param>
+        </member>
+        <member name="M:Mock.Data.DataFactory.Base64Encrypt(System.String,System.String)">
+            <summary>
+            对字符串进行Base64加密
+            </summary>
+            <param name="data">明文</param>
+            <param name="encoding">编码</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.Encode(System.String,System.String)">
+            <summary>
+            对字符串进行Base64加密
+            </summary>
+            <param name="data">明文</param>
+            <param name="encoding">编码</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.Base64Decrypt(System.String,System.String)">
+            <summary>
+            对Base64加密的密文进行解密
+            </summary>
+            <param name="data">密文</param>
+            <param name="encoding">编码</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.Decode(System.String,System.String)">
+            <summary>
+            对Base64加密的密文进行解密
+            </summary>
+            <param name="data">密文</param>
+            <param name="encoding">编码</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GetString(System.String,System.Int32,System.Text.Encoding)">
+            <summary>
+            将字符串按指定字节长度分割，存入列表
+            </summary>
+            <param name="content">待分割的字符串</param>
+            <param name="bytesNum">字节长度</param>
+            <param name="encoding">字符编码</param>
+            <returns>分割后的列表对象</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GetGBKString">
+            <summary>
+            获取GBK字符集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GetKeyword(System.String)">
+            <summary>
+            获取关键字信息
+            </summary>
+            <param name="keyword">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.ParseBH(System.String)">
+            <summary>
+            编号处理
+            </summary>
+            <param name="number">输入编号</param>
+            <returns>处理过的编号List</returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.ZipDecompress(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            解压缩ZIP文件到制定目录
+            </summary>
+            <param name="zipFileName">ZIP文件名</param>
+            <param name="savePath">解压缩后的文件要保存到的文件夹名</param>
+            <param name="encoding">解压缩使用的字符集</param>
+        </member>
+        <member name="M:Mock.Data.DataFactory.ZipCompress(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            将制定文件夹下的文件压缩成制定ZIP文件
+            </summary>
+            <param name="dirPath">要压缩的文件夹路径</param>
+            <param name="zipFileName">压缩后保存的文件名</param>
+            <param name="encoding">压缩使用的字符集</param>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GZipDecompress(System.Byte[])">
+            <summary>
+            GZip解压函数
+            </summary>
+            <param name="compressData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GZipCompress(System.Byte[])">
+            <summary>
+            GZip压缩函数
+            </summary>
+            <param name="decompressData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.DeflateDecompress(System.Byte[])">
+            <summary>
+            Deflate解压函数
+            JS:var details = eval_r('(' + utf8to16(zip_depress(base64decode(hidEnCode.value))) + ')')对应的C#压缩方法
+            </summary>
+            <param name="compressData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.DeflateCompress(System.Byte[])">
+            <summary>
+            Deflate压缩函数
+            </summary>
+            <param name="decompressData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.GetRealType(System.Type,System.String,System.Object)">
+            <summary>
+            获取真实的可以创建实例的类名
+            </summary>
+            <param name="objectType"></param>
+            <param name="nodeName"></param>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.DataFactory.InitXmlNode(System.Xml.XmlNode)">
+            <summary>
+            校验输入node的正确性
+            </summary>
+            <param name="objectNode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Data.VK">
+            <summary>
+            键盘模拟按键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.BACK">
+            <summary>
+            退格键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.TAB">
+            <summary>
+            Tab键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.SHIFT">
+            <summary>
+            Shift键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.RETURN">
+            <summary>
+            回车键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.CTRL">
+            <summary>
+            Ctrl键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.ALT">
+            <summary>
+            Alt键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.PAUSE">
+            <summary>
+            Pause Break鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.CAPS_LOCK">
+            <summary>
+            Caps_Lock键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.ESC">
+            <summary>
+            Esc键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.SPACE">
+            <summary>
+            空格键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.PAGE_UP">
+            <summary>
+            Page Up键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.PAGE_DOWN">
+            <summary>
+            Page Down键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.END">
+            <summary>
+            End键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.HOME">
+            <summary>
+            Home键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.LEFT">
+            <summary>
+            左键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.UP">
+            <summary>
+            上键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.RIGHT">
+            <summary>
+            右键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.DOWN">
+            <summary>
+            下键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.INSERT">
+            <summary>
+            Insert键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.DELETE">
+            <summary>
+            Delete键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.A">
+            <summary>
+            A键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.LWIN">
+            <summary>
+            左徽标键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.RWIN">
+            <summary>
+            右徽标键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.APPS">
+            <summary>
+            右键菜单键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUMPAD0">
+            <summary>
+            小键盘0键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUMPAD1">
+            <summary>
+            小键盘1键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUMPAD2">
+            <summary>
+            小键盘2键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUMPAD3">
+            <summary>
+            小键盘3键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUMPAD4">
+            <summary>
+            小键盘4键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUMPAD5">
+            <summary>
+            小键盘5键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUMPAD6">
+            <summary>
+            小键盘6键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUMPAD7">
+            <summary>
+            小键盘7键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUMPAD8">
+            <summary>
+            小键盘8键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUMPAD9">
+            <summary>
+            小键盘9键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.MULTIPLY">
+            <summary>
+            小键盘*键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.ADD">
+            <summary>
+            小键盘+键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.SUBTRACT">
+            <summary>
+            小键盘-键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.DECIMAL">
+            <summary>
+            小键盘.键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.DIVIDE">
+            <summary>
+            小键盘/键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F1">
+            <summary>
+            F1键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F2">
+            <summary>
+            F2键
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F3">
+            <summary>
+            F3鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F4">
+            <summary>
+            F4鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F5">
+            <summary>
+            F5鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F6">
+            <summary>
+            F6鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F7">
+            <summary>
+            F7鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F8">
+            <summary>
+            F8鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F9">
+            <summary>
+            F9鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F10">
+            <summary>
+            F10鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F11">
+            <summary>
+            F11鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.F12">
+            <summary>
+            F12鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.NUM_LOCK">
+            <summary>
+            Num Lock鍵
+            </summary>
+        </member>
+        <member name="F:Mock.Data.VK.SCROLL">
+            <summary>
+            Scroll Lock鍵
+            </summary>
+        </member>
+        <member name="T:Mock.Data.ConvertType">
+            <summary>
+            数据转换类型
+            </summary>
+        </member>
+        <member name="T:Mock.Data.EncryptType">
+            <summary>
+            加密类型
+            </summary>
+        </member>
+        <member name="T:Mock.Data.DecryptType">
+            <summary>
+            解密类型
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Exception.CanNotFindDataException">
+            <summary>
+            找不到数据异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.CanNotFindDataException.#ctor(System.String)">
+            <summary>
+            构造找不到数据异常的新实例
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Exception.InvalidDataTypeException">
+            <summary>
+            表示无效数据类型异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.InvalidDataTypeException.#ctor(System.String)">
+            <summary>
+            构造无效数据类型异常的新实例
+            </summary>
+            <param name="dataType">数据类型</param>
+        </member>
+        <member name="T:Mock.Data.Exception.NotImplementingInterfaceException">
+            <summary>
+            没有继承接口时触发此异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.NotImplementingInterfaceException.#ctor(System.String,System.String)">
+            <summary>
+            构造没有继承接口异常的新实例
+            </summary>
+            <param name="className">类名</param>
+            <param name="interfaceName">接口名</param>
+        </member>
+        <member name="T:Mock.Data.Exception.NotUniqueDataException">
+            <summary>
+            数据不唯一异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.NotUniqueDataException.#ctor(System.String,System.String)">
+            <summary>
+            构造数据不唯一异常的新实例
+            </summary>
+            <param name="name"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:Mock.Data.Exception.NotUniqueDataException.#ctor(System.String)">
+            <summary>
+            构造数据不唯一异常的新实例
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="T:Mock.Data.Exception.PropertyIsNullException">
+            <summary>
+            属性为空异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.PropertyIsNullException.#ctor(System.String)">
+            <summary>
+            构造属性为空异常的新实例
+            </summary>
+            <param name="propertyName">属性名称</param>
+        </member>
+        <member name="T:Mock.Data.IDatabaseData">
+            <summary>
+            表示所有数据库数据对象接口
+            </summary>
+        </member>
+        <member name="M:Mock.Data.IDatabaseData.Get">
+            <summary>
+            获取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Data.IDatabaseData.Save">
+            <summary>
+            保存数据
+            </summary>
+        </member>
+        <member name="M:Mock.Data.IDatabaseData.Delete">
+            <summary>
+            删除数据
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.DataBase.DataBaseType">
+            <summary>
+            表示数据库类型
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.DataBase.DataBaseType.Oracle">
+            <summary>
+            Oracle数据库类型
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.DataBase.DataBaseType.SQLite">
+            <summary>
+            SQLite数据库类型
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.DataBase.DataBaseType.Access">
+            <summary>
+            Access数据库类型
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.DataBase.DataBaseType.PgSql">
+            <summary>
+            PgSql数据库类型
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.DataBase.DataBaseType.Paradox">
+            <summary>
+            Paradox数据库类型
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.DataBase.DataBaseType.Mysql">
+            <summary>
+            Mysql数据库类型
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.DataBase.ResultSet">
+            <summary>
+            结果集接口
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.ResultSet.GetString(System.String)">
+            <summary>
+            Get string value
+            </summary>
+            <param name="Name">value name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.ResultSet.GetString(System.Int32)">
+            <summary>
+            Get string value
+            </summary>
+            <param name="index">value index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.ResultSet.First">
+            <summary>
+            Go to first element of the resultset
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.ResultSet.Last">
+            <summary>
+            Go to last element of the resultset
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.DataBase.ResultSet.ToString">
+            <summary>
+            String description of the resultset
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.ResultSet.GetObject``1">
+            <summary>
+            Change the value which in resultset to type T
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.DataBase.ResultSet.GetObject(System.Type)">
+            <summary>
+            Change the value which in resultset to type objType
+            </summary>
+            <param name="objType">Object type</param>
+            <returns></returns>
+        </member>
+        <member name="P:Mock.Nature.DataBase.ResultSet.Count">
+            <summary>
+            Get the count of the resultset
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.ResultSet.Next">
+            <summary>
+            Get the next value of current in the resultset
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.DataBase.ResultSetClass">
+            <summary>
+            结果集实现类
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.DataBase.TableKeyInfo">
+            <summary>
+            the key info of the table
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.DataBase.TableKeyInfo._type">
+            <summary>
+            table key data type
+            </summary>
+        </member>
+        <member name="P:Mock.Nature.DataBase.TableKeyInfo.Name">
+            <summary>
+            table key name
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.Exception.DataBaseNotOpenException">
+            <summary>
+            Exception when data base has not been opened occur.
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.Exception.DataBaseNotOpenException.#ctor(System.String)">
+            <summary>
+            Create an instance of DataBaseNotOpenException type.
+            </summary>
+            <param name="dbName"></param>
+        </member>
+        <member name="T:Mock.Nature.Exception.DataBaseRuntimeException">
+            <summary>
+            Exception occured when running something in data base error appear.
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.Exception.DataBaseRuntimeException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="T:Mock.Nature.Exception.FieldIsNotInTableException">
+            <summary>
+            Exception when set field to table which is not contains the named field occur.
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.Exception.FieldIsNotInTableException.#ctor(System.String,System.String)">
+            <summary>
+            Create an instance of FieldIsNotInTableException type.
+            </summary>
+            <param name="tableName"></param>
+            <param name="fieldName"></param>
+        </member>
+        <member name="T:Mock.Nature.Exception.IllegalReadOperationException">
+            <summary>
+            非法的读操作异常
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.Exception.IllegalReadOperationException.#ctor(System.String)">
+            <summary>
+            构造非法读操作异常的新实例
+            </summary>
+            <param name="message">异常信息</param>
+        </member>
+        <member name="T:Mock.Nature.Exception.InvalidDataBaseTypeException">
+            <summary>
+            非法的数据库类型异常
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.Exception.InvalidDataBaseTypeException.#ctor(System.String)">
+            <summary>
+            构造非法数据库类型异常的新实例
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.WM_NULL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.WM_CREATE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.WM_DESTROY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.SC_MONITORPOWER">
+            <summary>
+            The lParam parameter can have the following values:
+            •-1 (the display is powering on)
+            •1 (the display is going to low power)
+            •2 (the display is being shut off)
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.SC_MOUSEMENU">
+            <summary>
+             Retrieves the window menu as a result of a mouse click.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.SC_MOVE">
+            <summary>
+             Moves the window.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.SC_NEXTWINDOW">
+            <summary>
+             Moves to the next window.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.SC_PREVWINDOW">
+            <summary>
+             Moves to the previous window.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.SC_RESTORE">
+            <summary>
+             Restores the window to its normal position and size.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.SC_SCREENSAVE">
+            <summary>
+             Executes the screen saver application specified in the [boot] section of the System.ini file.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.SC_SIZE">
+            <summary>
+             Sizes the window.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.SC_TASKLIST">
+            <summary>
+             Activates the Start menu.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowsMessages.SC_VSCROLL">
+            <summary>
+            Scrolls vertically.s
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.Native.NativeMethods">
+            <summary>
+            本地方法
+            </summary>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.UnhookWindowsHookEx(System.IntPtr)">
+            <summary>
+            取消Hook
+            </summary>
+            <param name="handle">Hook 句柄</param>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SetWindowsHookEx(Mock.Nature.Native.HookType,Mock.Nature.Native.HookProc,System.IntPtr,System.Int32)">
+            <summary>
+            添加Hook
+            </summary>
+            <param name="idHook"></param>
+            <param name="lpfn"></param>
+            <param name="hinstance"></param>
+            <param name="threadID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.CallNextHookEx(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="handle"></param>
+            <param name="code"></param>
+            <param name="wparam"></param>
+            <param name="lparam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetCurrentThreadId">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetLastError">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.FindWindow(System.String,System.String)">
+            <summary>
+            获取窗口句柄
+            </summary>
+            <param name="lpClassName"></param>
+            <param name="lpWindowName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.FindWindowEx(System.IntPtr,System.IntPtr,System.String,System.String)">
+            <summary>
+            获取子窗口句柄
+            </summary>
+            <param name="hWnd"></param>
+            <param name="index"></param>
+            <param name="lpClassName"></param>
+            <param name="lpWindowName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.MakeLParam(System.UInt32,System.UInt32)">
+            <summary>
+            生成lParam参数
+            </summary>
+            <param name="LoWord">低位</param>
+            <param name="HiWord">高位</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetClientRect(System.IntPtr,Mock.Nature.Native.RECT@)">
+            <summary>
+            获取窗口矩形
+            </summary>
+            <param name="hWnd"></param>
+            <param name="lpRect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SetWindowPos(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            设置窗口大小/Z序/位置
+            </summary>
+            <param name="hWnd"></param>
+            <param name="hWndInsertAfter"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="Width"></param>
+            <param name="Height"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.UpdateWindow(System.IntPtr)">
+            <summary>
+            更新窗口
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.ShowOwnedPopups(System.IntPtr,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd"></param>
+            <param name="fShow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.ShowOwnedPopups(System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd"></param>
+            <param name="fShow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.AccessibleObjectFromWindow(System.Int32,Mock.Nature.Native.OBJID,System.Guid@,System.Object@)">
+            <summary>
+            
+            </summary>
+            <param name="hwnd"></param>
+            <param name="id"></param>
+            <param name="iid"></param>
+            <param name="ppvObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.AccessibleChildren(Accessibility.IAccessible,System.Int32,System.Int32,System.Object[],System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="paccContainer"></param>
+            <param name="iChildStart"></param>
+            <param name="cChildren"></param>
+            <param name="rgvarChildren"></param>
+            <param name="pcObtained"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.WindowFromAccessibleObject(Accessibility.IAccessible,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="paccContainer"></param>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.IsHungAppWindow(System.IntPtr)">
+            <summary>
+            判断窗口是否挂起
+            </summary>
+            <param name="Hwnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.IsHungAppWindow(System.Int32)">
+            <summary>
+            判断窗口是否挂起
+            </summary>
+            <param name="Hwnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetForegroundWindow">
+            <summary>
+            获取前台窗口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetWindow(System.IntPtr,Mock.Nature.Native.GetWindowOffsets)">
+            <summary>
+            获取前台窗口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetWindow(System.Int32,Mock.Nature.Native.GetWindowOffsets)">
+            <summary>
+            获取前台窗口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SetForegroundWindow(System.IntPtr)">
+            <summary>
+            将制定窗口置顶
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SetForegroundWindow(System.Int32)">
+            <summary>
+            将制定窗口置顶
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SetActiveWindow(System.IntPtr)">
+            <summary>
+            激活指定窗口
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SetActiveWindow(System.Int32)">
+            <summary>
+            激活指定窗口
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetTopWindow(System.IntPtr)">
+            <summary>
+            获取指定窗口的最顶层子窗口
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetTopWindow(System.Int32)">
+            <summary>
+            获取指定窗口的最顶层子窗口
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.BringWindowToTop(System.IntPtr)">
+            <summary>
+            置顶指定窗口
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.BringWindowToTop(System.Int32)">
+            <summary>
+            置顶指定窗口
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.ShowWindowAsync(System.IntPtr,System.Int32)">
+            <summary>
+            设置窗口显示状态
+            </summary>
+            <param name="hWnd"></param>
+            <param name="nCmdShow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.IsIconic(System.IntPtr)">
+            <summary>
+            判断窗口是否已经最小化
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetAsyncKeyState(System.Int32)">
+            <summary>
+            获取按键当前状态
+            高位（是否按下）低位（上次按键状态）
+            </summary>
+            <param name="vKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetWindowText(System.IntPtr,System.Text.StringBuilder,System.Int32)">
+            <summary>
+            获取窗口标题
+            </summary>
+            <param name="hWnd"></param>
+            <param name="title"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.IsWindowVisible(System.IntPtr)">
+            <summary>
+            检查窗口是否可见
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetWindowTextLength(System.IntPtr)">
+            <summary>
+            获取窗口标题长度
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.ShowWindow(System.IntPtr,System.UInt32)">
+            <summary>
+            显示窗口
+            </summary>
+            <param name="hWnd"></param>
+            <param name="nCmdShow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.EnumWindows(Mock.Nature.Native.EnumWindowsProc,System.Int32)">
+            <summary>
+            枚举窗口
+            </summary>
+            <param name="lpfn"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.EnumChildWindows(System.IntPtr,Mock.Nature.Native.EnumChildWindowsProc,System.Int32)">
+            <summary>
+            枚举指定窗口的子窗口
+            </summary>
+            <param name="hWndParent"></param>
+            <param name="lpfn"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetWindowLong(System.IntPtr,Mock.Nature.Native.SetWindowLongOffsets)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd"></param>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetWindowThreadProcessId(System.IntPtr,System.Int32@)">
+            <summary>
+            获取窗口进程ID
+            </summary>
+            <param name="hWnd"></param>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.IsWindow(System.IntPtr)">
+            <summary>
+            判断窗口是否有效
+            </summary>
+            <param name="hWnd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="val"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="def"></param>
+            <param name="retVal"></param>
+            <param name="size"></param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendMessage(System.IntPtr,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendMessage(System.IntPtr,Mock.Nature.Native.WindowsMessages,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendMessage(System.IntPtr,Mock.Nature.Native.WindowsMessages,System.UInt32,System.UInt32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendMessage(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendMessage(System.Int32,Mock.Nature.Native.WindowsMessages,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendMessage(System.Int32,Mock.Nature.Native.WindowsMessages,System.UInt32,System.UInt32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendNotifyMessage(System.IntPtr,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendNotifyMessage(System.IntPtr,Mock.Nature.Native.WindowsMessages,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendNotifyMessage(System.IntPtr,Mock.Nature.Native.WindowsMessages,System.UInt32,System.UInt32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendNotifyMessage(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendNotifyMessage(System.Int32,Mock.Nature.Native.WindowsMessages,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.SendNotifyMessage(System.Int32,Mock.Nature.Native.WindowsMessages,System.UInt32,System.UInt32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.PostMessage(System.IntPtr,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd">接收消息的窗口句柄</param>
+            <param name="msg">消息类型</param>
+            <param name="wParam">参数高位wParam</param>
+            <param name="lParam">参数低位lParam</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.PostMessage(System.IntPtr,Mock.Nature.Native.WindowsMessages,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd">接收消息的窗口句柄</param>
+            <param name="msg">消息类型</param>
+            <param name="wParam">参数高位wParam</param>
+            <param name="lParam">参数低位lParam</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.PostMessage(System.IntPtr,System.Int32,System.Int32,System.String)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd">接收消息的窗口句柄</param>
+            <param name="msg">消息类型</param>
+            <param name="wParam">参数高位wParam</param>
+            <param name="lParam">参数低位lParam</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.PostMessage(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd">接收消息的窗口句柄</param>
+            <param name="msg">消息类型</param>
+            <param name="wParam">参数高位wParam</param>
+            <param name="lParam">参数低位lParam</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.PostMessage(System.Int32,Mock.Nature.Native.WindowsMessages,System.Int32,System.Int32)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd">接收消息的窗口句柄</param>
+            <param name="msg">消息类型</param>
+            <param name="wParam">参数高位wParam</param>
+            <param name="lParam">参数低位lParam</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.PostMessage(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            向指定窗口发送消息
+            </summary>
+            <param name="hWnd">接收消息的窗口句柄</param>
+            <param name="msg">消息类型</param>
+            <param name="wParam">参数高位wParam</param>
+            <param name="lParam">参数低位lParam</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.MemLoadLibrary(System.Byte[]@,System.Int32)">
+            <summary>
+            从内存中加载DLL
+            </summary>
+            <param name="buf"></param>
+            <param name="nLen"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.MemGetProcAddress(System.IntPtr,System.String)">
+            <summary>
+            获取内存中的DLL中函数的地址
+            </summary>
+            <param name="handle"></param>
+            <param name="funcName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.MemFreeLibrary(System.IntPtr)">
+            <summary>
+            释放从内存中加载的DLL
+            </summary>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.BlockInput(System.Boolean)">
+            <summary>
+            禁用鼠标键盘
+            </summary>
+            <param name="Block"></param>
+        </member>
+        <member name="M:Mock.Nature.Native.NativeMethods.GetDoubleClickTime">
+            <summary>
+            获取鼠标双击事件间隔
+            </summary>
+            <returns>以毫秒表示的鼠标双击事件事件间隔</returns>
+        </member>
+        <member name="T:Mock.Nature.Native.HookProc">
+            <summary>
+            Hook 操作句柄
+            </summary>
+            <param name="code">操作码</param>
+            <param name="wparam">wParam</param>
+            <param name="lparam">lParam</param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Nature.Native.EnumWindowsProc">
+            <summary>
+            枚举窗口句柄
+            </summary>
+            <param name="hWnd"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Nature.Native.EnumChildWindowsProc">
+            <summary>
+            枚举子窗口句柄
+            </summary>
+            <param name="hwnd">窗口句柄</param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Nature.Native.HookType">
+            <summary>
+            Hook类型
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.MsgFilter">
+            <summary>
+            对话框、消息框、菜单或滚动条输入消息钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.JournalRecord">
+            <summary>
+            输入消息记录钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.JournalPlayback">
+            <summary>
+            回放通过JournalRecord钩子记录的输入消息
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.Keyboard">
+            <summary>
+            键盘消息钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.GetMessage">
+            <summary>
+            接收消息投递钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.CallWndProc">
+            <summary>
+            系统将消息发送到指定窗口之前钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.CBT">
+            <summary>
+            基于计算机培训的钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.SysMsgFilter">
+            <summary>
+            系统消息钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.Mouse">
+            <summary>
+            鼠标消息钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.Hardware">
+            <summary>
+            非标准硬件(非鼠标、键盘)消息钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.Debug">
+            <summary>
+            差错钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.Shell">
+            <summary>
+            外壳钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.ForegroundIdle">
+            <summary>
+            前台空闲窗口钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.CallWndProcRet">
+            <summary>
+            消息已经在窗口中处理的钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.KeyboardLL">
+            <summary>
+            底层键盘消息钩子
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.HookType.MouseLL">
+            <summary>
+            底层鼠标消息钩子
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.Native.OBJID">
+            <summary>
+            MSAA OBJID
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.WINDOW">
+            <summary>
+            窗口
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.SYSMENU">
+            <summary>
+            系统菜单
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.TITLEBAR">
+            <summary>
+            标题栏
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.MENU">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.CLIENT">
+            <summary>
+            控件
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.VSCROLL">
+            <summary>
+            垂直滚动条
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.HSCROLL">
+            <summary>
+            水平滚动条
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.SIZEGRIP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.CARET">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.CURSOR">
+            <summary>
+            鼠标指针
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.ALERT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.OBJID.SOUND">
+            <summary>
+            声音
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.Native.SELFLAG">
+            <summary>
+            IAccessible.accSelect selectFlags
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SELFLAG.NONE">
+            <summary>
+            Performs no action. Active Accessibility does not change the selection or focus.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SELFLAG.TAKEFOCUS">
+            <summary>
+            Sets the focus to the object and makes it the selection anchor. 
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SELFLAG.TAKESELECTION">
+            <summary>
+            Selects the object and removes the selection from all other objects in the container.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SELFLAG.EXTENDSELECTION">
+            <summary>
+            Alters the selection so that all objects between the selection anchor and this object take on the anchor object's selection state.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SELFLAG.ADDSELECTION">
+            <summary>
+            Adds the object to the current selection; possible result is a noncontiguous selection.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SELFLAG.REMOVESELECTION">
+            <summary>
+            Removes the object from the current selection; possible result is a noncontiguous selection. 
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.Native.SetWindowLongOffsets">
+            <summary>
+            SetWindowLong indexes
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowLongOffsets.GWL_WNDPROC">
+            <summary>
+            GWL_WNDPROC
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowLongOffsets.GWL_HINSTANCE">
+            <summary>
+            GWL_HINSTANCE
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowLongOffsets.GWL_HWNDPARENT">
+            <summary>
+            GWL_HWNDPARENT
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowLongOffsets.GWL_STYLE">
+            <summary>
+            GWL_STYLE
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowLongOffsets.GWL_EXSTYLE">
+            <summary>
+            GWL_STYLE
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowLongOffsets.GWL_USERDATA">
+            <summary>
+            GWL_STYLE
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowLongOffsets.GWL_ID">
+            <summary>
+            GWL_STYLE
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.Native.WindowStyles">
+            <summary>
+            窗口样式
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_OVERLAPPED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_POPUP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_CHILD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_MINIMIZE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_VISIBLE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_DISABLED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_CLIPSIBLINGS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_CLIPCHILDREN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_MAXIMIZE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_CAPTION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_BORDER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_DLGFRAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_VSCROLL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_HSCROLL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_SYSMENU">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_THICKFRAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_GROUP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_TABSTOP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_MINIMIZEBOX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_MAXIMIZEBOX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_TILED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_ICONIC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_SIZEBOX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_POPUPWINDOW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_OVERLAPPEDWINDOW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_TILEDWINDOW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowStyles.WS_CHILDWINDOW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Mock.Nature.Native.WindowExtStyles">
+            <summary>
+            窗口样式
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_OVERLAPPED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_POPUP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_CHILD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_MINIMIZE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_VISIBLE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_DISABLED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_CLIPSIBLINGS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_CLIPCHILDREN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_MAXIMIZE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_CAPTION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_BORDER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_DLGFRAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_VSCROLL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_HSCROLL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_SYSMENU">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_THICKFRAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_GROUP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_TABSTOP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_MINIMIZEBOX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_MAXIMIZEBOX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_TILED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_ICONIC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_SIZEBOX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_POPUPWINDOW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_OVERLAPPEDWINDOW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_TILEDWINDOW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.WindowExtStyles.WS_CHILDWINDOW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.GetWindowOffsets.GW_CHILD">
+            <summary>
+            The retrieved handle identifies the child window at the top of the Z order, if the specified window is a parent window; otherwise, the retrieved handle is NULL. The function examines only child windows of the specified window. It does not examine descendant windows.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.GetWindowOffsets.GW_ENABLEDPOPUP">
+            <summary>
+            The retrieved handle identifies the enabled popup window owned by the specified window (the search uses the first such window found using GW_HWNDNEXT); otherwise, if there are no enabled popup windows, the retrieved handle is that of the specified window.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.GetWindowOffsets.GW_HWNDFIRST">
+            <summary>
+            The retrieved handle identifies the window of the same type that is highest in the Z order.
+            If the specified window is a topmost window, the handle identifies a topmost window. If the specified window is a top-level window, the handle identifies a top-level window. If the specified window is a child window, the handle identifies a sibling window.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.GetWindowOffsets.GW_HWNDLAST">
+            <summary>
+            The retrieved handle identifies the window of the same type that is lowest in the Z order.
+            If the specified window is a topmost window, the handle identifies a topmost window. If the specified window is a top-level window, the handle identifies a top-level window. If the specified window is a child window, the handle identifies a sibling window.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.GetWindowOffsets.GW_HWNDNEXT">
+            <summary>
+            The retrieved handle identifies the window below the specified window in the Z order.
+            If the specified window is a topmost window, the handle identifies a topmost window. If the specified window is a top-level window, the handle identifies a top-level window. If the specified window is a child window, the handle identifies a sibling window.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.GetWindowOffsets.GW_HWNDPREV">
+            <summary>
+            The retrieved handle identifies the window above the specified window in the Z order.
+            If the specified window is a topmost window, the handle identifies a topmost window. If the specified window is a top-level window, the handle identifies a top-level window. If the specified window is a child window, the handle identifies a sibling window.
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.GetWindowOffsets.GW_OWNER">
+            <summary>
+            The retrieved handle identifies the specified window's owner window, if any. For more information, see Owned Windows. 
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.HWND_BOTTOM">
+            <summary>
+            将窗口置于Z序的底部。如果参数hWnd标识了一个顶层窗口，则窗口失去顶级位置，并且被置在其他窗口的底部。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.HWND_DOTTOPMOST">
+            <summary>
+            将窗口置于所有非顶层窗口之上（即在所有顶层窗口之后）。如果窗口已经是非顶层窗口则该标志不起作用。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.HWND_TOP">
+            <summary>
+            将窗口置于Z序的顶部。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.HWND_TOPMOST">
+            <summary>
+            将窗口置于所有非顶层窗口之上。即使窗口未被激活窗口也将保持顶级位置。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_ASNCWINDOWPOS">
+            <summary>
+            如果调用进程不拥有窗口，系统会向拥有窗口的线程发出需求。这就防止调用线程在其他线程处理需求的时候发生死锁。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_DEFERERASE">
+            <summary>
+            防止产生WM_SYNCPAINT消息。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_DRAWFRAME">
+            <summary>
+            在窗口周围画一个边框（定义在窗口类描述中）。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_FRAMECHANGED">
+            <summary>
+            给窗口发送WM_NCCALCSIZE消息，即使窗口尺寸没有改变也会发送该消息。如果未指定这个标志，只有在改变了窗口尺寸时才发送WM_NCCALCSIZE。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_HIDEWINDOW">
+            <summary>
+            隐藏窗口。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_NOACTIVATE">
+            <summary>
+            不激活窗口。如果未设置标志，则窗口被激活，并被设置到其他最高级窗口或非最高级组的顶部（根据参数hWndlnsertAfter设置）。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_NOCOPYBITS">
+            <summary>
+            清除客户区的所有内容。如果未设置该标志，客户区的有效内容被保存并且在窗口尺寸更新和重定位后拷贝回客户区。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_NOMOVE">
+            <summary>
+            维持当前位置（忽略X和Y参数）。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_NOOWNERZORDER">
+            <summary>
+            不改变z序中的所有者窗口的位置。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_NOREDRAW">
+            <summary>
+            不重画改变的内容。如果设置了这个标志，则不发生任何重画动作。适用于客户区和非客户区（包括标题栏和滚动条）和任何由于窗回移动而露出的父窗口的所有部分。如果设置了这个标志，应用程序必须明确地使窗口无效并区重画窗口的任何部分和父窗口需要重画的部分。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_NOREPOSITION">
+            <summary>
+            与SWP_NOOWNERZORDER标志相同。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_NOSENDCHANGING">
+            <summary>
+            防止窗口接收WM_WINDOWPOSCHANGING消息。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_NOSIZE">
+            <summary>
+            维持当前尺寸（忽略cx和Cy参数）。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_NOZORDER">
+            <summary>
+            维持当前Z序（忽略hWndlnsertAfter参数）。
+            </summary>
+        </member>
+        <member name="F:Mock.Nature.Native.SetWindowPosParameters.SWP_SHOWWINDOW">
+            <summary>
+            显示窗口。
+            </summary>
+        </member>
+        <member name="T:Mock.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:Mock.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Mock.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:Mock.Properties.Resources.bb">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Mock.Properties.Resources.MCard">
+            <summary>
+              查找 System.Byte[] 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="T:Mock.Job">
+            <summary>
+            表示测试机线程执行工作的句柄
+            </summary>
+        </member>
+        <member name="T:Mock.NoteType">
+            <summary>
+            表示日志类型
+            </summary>
+        </member>
+        <member name="F:Mock.NoteType.ERROR">
+            <summary>
+            错误类型
+            </summary>
+        </member>
+        <member name="F:Mock.NoteType.SUCCESS">
+            <summary>
+            成功类型
+            </summary>
+        </member>
+        <member name="F:Mock.NoteType.FAILED">
+            <summary>
+            失败类型
+            </summary>
+        </member>
+        <member name="F:Mock.NoteType.WARNING">
+            <summary>
+            警告类型
+            </summary>
+        </member>
+        <member name="F:Mock.NoteType.EXCEPTION">
+            <summary>
+            异常类型
+            </summary>
+        </member>
+        <member name="F:Mock.NoteType.MESSAGE">
+            <summary>
+            提示类型
+            </summary>
+        </member>
+        <member name="F:Mock.NoteType.DEBUG">
+            <summary>
+            调试日志
+            </summary>
+        </member>
+        <member name="F:Mock.NoteType.IGNORE">
+            <summary>
+            可以忽略的日志
+            </summary>
+        </member>
+        <member name="T:Mock.Robot">
+            <summary>
+            表示测试机器对象
+            </summary>
+        </member>
+        <member name="M:Mock.Robot.StartInternetExplore(System.String)">
+            <summary>
+            使用IE打开指定的地址
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:Mock.Robot.CloseInternetExplore">
+            <summary>
+            关闭所有IE窗口
+            </summary>
+        </member>
+        <member name="M:Mock.Robot.CloseSoftware">
+            <summary>
+            关闭被测软件
+            </summary>
+        </member>
+        <member name="M:Mock.Robot.ExecuteWithTimeOut(Mock.Job,System.Int32,System.Boolean)">
+            <summary>
+            执行一段代码直到结束或超时
+            </summary>
+            <param name="job">函数</param>
+            <param name="timeout">超时时间</param>
+            <param name="throwOnTimeout"></param>
+        </member>
+        <member name="M:Mock.Robot.NewJob(System.String,Mock.Job)">
+            <summary>
+            创建一个新的任务
+            </summary>
+            <param name="jobName">任务名</param>
+            <param name="job">任务方法体</param>
+        </member>
+        <member name="M:Mock.Robot.JobsWait(System.String)">
+            <summary>
+            调用此方法使一个或所有任务处于等待状态
+            </summary>
+            <param name="jobName">等待的任务名称，若为null，则代表所有任务</param>
+        </member>
+        <member name="M:Mock.Robot.StartJobs(System.String)">
+            <summary>
+            调用此方法使一个或所有处于等待状态的任务处于运行状态
+            </summary>
+            <param name="jobName">等待状态的任务名称，若为null，则代表所有任务</param>
+        </member>
+        <member name="M:Mock.Robot.StopJobs(System.String)">
+            <summary>
+            调用此方法停止一个或所有任务
+            </summary>
+            <param name="jobName">任务名称，若为null，则代表所有任务</param>
+        </member>
+        <member name="M:Mock.Robot.JobStoped(System.String)">
+            <summary>
+            判断指定名称的任务是否已经停止
+            </summary>
+            <param name="name">任务名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Robot.RemoveJob(System.String)">
+            <summary>
+            将任务从任务链中移除，但不终止任务
+            </summary>
+            <param name="jobName">任务名称，若为null，则代表所有任务</param>
+        </member>
+        <member name="M:Mock.Robot.Note(System.String,Mock.NoteType,System.String,System.Boolean)">
+            <summary>
+            写日志信息
+            </summary>
+            <param name="message">信息</param>
+            <param name="ntype">类型</param>
+            <param name="path">日志路径</param>
+            <param name="ignoreConfig">忽略配置</param>
+        </member>
+        <member name="M:Mock.Robot.Recess(System.Double)">
+            <summary>
+            等待指定时间
+            </summary>
+            <param name="millionSecond">等待的时间</param>
+        </member>
+        <member name="M:Mock.Robot.ThrowRobotException(Mock.TaistException)">
+            <summary>
+            预留方法
+            </summary>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Mock.Robot.AddTaistControEventListener(Mock.Tools.Controls.TaistControlEventHandler)">
+            <summary>
+            添加自动化测试控件事件
+            </summary>
+            <param name="ControlEvent"></param>
+        </member>
+        <member name="M:Mock.Robot.RemoveTaistControlEventListener(Mock.Tools.Controls.TaistControlEventHandler)">
+            <summary>
+            移除自动化测试控件事件
+            </summary>
+            <param name="ControlEvent"></param>
+        </member>
+        <member name="M:Mock.Robot.GetFileTime">
+            <summary>
+            获取被测软件启动文件的创建日期
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Robot.GetSoftwareVersion">
+            <summary>
+            获取测试软件的版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Robot.SavePrintedImage">
+            <summary>
+            保存打印文件到Tiff格式图片并删除打印任务
+            </summary>
+        </member>
+        <member name="M:Mock.Robot.SwitchTestSoftware(System.String,System.String)">
+            <summary>
+            转换测试软件
+            
+            执行该操作来设置taist.config中的SoftwareProcessName项，执行后，自动化测试框架
+            只负责操作指定进程的窗口，其他进程
+            
+            </summary>
+            <param name="softwareProcessName">要转换的软件进程名称（进程名不包含.exe后缀）</param>
+            <param name="versionDate">要转换的软件可执行文件日期（格式：yyyyMMdd）若该项为null或空，将不进行版本设置，若要执行最新版本，请输入99991231</param>
+        </member>
+        <member name="P:Mock.Robot.IsSoftwareRunning">
+            <summary>
+            判断当前是否存在测试程序进程
+            </summary>
+        </member>
+        <member name="P:Mock.Robot.CPU">
+            <summary>
+            获取当前CPU使用率
+            </summary>
+        </member>
+        <member name="P:Mock.Robot.Memory">
+            <summary>
+            获取当前内存使用值
+            </summary>
+        </member>
+        <member name="P:Mock.Robot.MAC">
+            <summary>
+            获取本地MAC地址
+            </summary>
+        </member>
+        <member name="P:Mock.Robot.IP">
+            <summary>
+            获取本地IP地址
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WinObject.GetElement(System.String)">
+            <summary>
+            获取窗口元素
+            </summary>
+            <param name="windowName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WinObject.GetElement(System.String,System.String)">
+            <summary>
+            依据窗体名称和控件名称获取控件
+            </summary>
+            <param name="windowName"></param>
+            <param name="elementName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WinObject.FindChild(Mock.Tools.Controls.WindowsUnit,System.Windows.Automation.Condition,System.String,System.String)">
+            <summary>
+            依据指定的条件从父控件获取子控件
+            </summary>
+            <param name="parent">父控件</param>
+            <param name="cond">查询条件</param>
+            <param name="parentName">父窗体名称</param>
+            <param name="friendlyName">窗体名称</param>
+            <returns>子控件</returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WinObject.GetType(System.String)">
+            <summary>
+            获取控件的类型
+            </summary>
+            <param name="type">类型名称</param>
+            <returns>控件类型，为<c>System.Windows.Automation.ControlType</c>的一个类型</returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.TaistControlEventInfo">
+            <summary>
+            自动化测试事件目标信息
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Controls.TaistControlType">
+            <summary>
+            自动化测试控件类型
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Controls.TaistEventType">
+            <summary>
+            自动化测试事件类型
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Controls.TaistControlEventHandler">
+            <summary>
+            自动化测试框架激活控件事件处理
+            </summary>
+            <param name="eventInfo"></param>
+        </member>
+        <member name="F:Mock.Tools.Controls.RobotContext._element">
+            <summary>
+            当前控件缓存
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.RobotContext.getRelativePath(System.String)">
+            <summary>
+            获取缓存的相对路径
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.RobotContext.getAllWindow">
+            <summary>
+            获取所有活动窗口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.RobotContext.getWindowBaseInfo(System.String)">
+            <summary>
+            获取窗口的基础信息
+            </summary>
+            <param name="runtimeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.RobotContext.containWindow(Mock.Tools.Controls.WindowsUnit)">
+            <summary>
+            查看是否存在指定的窗口
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.RobotContext.containWindow(System.IntPtr)">
+            <summary>
+            查看是否存在指定句柄的窗口
+            </summary>
+            <param name="windowHandle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.RobotContext.containWindow">
+            <summary>
+            查看是否存在WindowName设置的窗口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Mock.Tools.Controls.RobotContext.WindowName">
+            <summary>
+            当前窗口名称
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.RobotContext.ElementName">
+            <summary>
+            当前控件名称
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.RobotContext.Window">
+            <summary>
+            当前窗口缓存
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.RobotContext.InternetExploreServer">
+            <summary>
+            IE元素相对高度
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.RobotContext.InternetExploreWindow">
+            <summary>
+            IE窗口
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.RobotContext.IsWindowsObjectInitilized">
+            <summary>
+            windows 窗体控件初始化标志
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.RobotContext.IsWarningWindowExist">
+            <summary>
+            属于警告窗口列表中的窗口出现标志
+            </summary>
+        </member>
+        <member name="E:Mock.Tools.Controls.RobotContext.WindowOpenEvent">
+            <summary>
+            窗口打开事件
+            </summary>
+        </member>
+        <member name="E:Mock.Tools.Controls.RobotContext.WindowCloseEvent">
+            <summary>
+            窗口关闭事件
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Controls.ButtonObject">
+            <summary>
+            <c>ButtonObject</c>
+            表示一个按钮对象
+            
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.ButtonObject.#ctor(System.String,System.String)">
+             <summary>
+            根据窗口名称和按钮名称获得按钮
+             </summary>
+             <param name="windowName">按钮所在窗口的虚拟名称，这通常在对象库中显示为Window的FriendlyName属性</param>
+             <param name="buttonName">按钮名称，这通常在对象库中显示为Element的FriendlyName属性</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.MouseObject.mouse_event(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Mouse click event
+            </summary>
+            <param name="mouseEventFlag">MouseEventFlag </param>
+            <param name="incrementX">X coordinate</param>
+            <param name="incrementY">Y coordinate</param>
+            <param name="data"></param>
+            <param name="extraInfo"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.MouseObject.SetCursorPos(System.Int32,System.Int32)">
+            <summary>
+            Set Mouse Cursor Position
+            </summary>
+            <param name="x">X Coordinary</param>
+            <param name="y">Y Coordinary</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.ComObject.CallFunction(System.String,System.Object[])">
+            <summary>
+            调用COM接口导出的方法
+            </summary>
+            <param name="fName">方法名称</param>
+            <param name="args">参数数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.ComObject.getProperty(System.String)">
+            <summary>
+            获取COM接口导出的属性值，该属性必须有get权限
+            </summary>
+            <param name="pName">属性名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.ComObject.setProperty(System.String,System.Object)">
+            <summary>
+            设置COM接口导出的属性，该属性必须有set权限
+            </summary>
+            <param name="pName">属性名称</param>
+            <param name="pValue">属性值</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.ComObject.Dispose">
+            <summary>
+            释放COM对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.TransparentAgent.CallFunction(System.String,System.Object[])">
+            <summary>
+            调用COM接口导出的方法
+            </summary>
+            <param name="fName">方法名称</param>
+            <param name="args">参数数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.TransparentAgent.getProperty(System.String)">
+            <summary>
+            获取COM接口导出的属性值，该属性必须有get权限
+            </summary>
+            <param name="pName">属性名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.TransparentAgent.setProperty(System.String,System.Object)">
+            <summary>
+            设置COM接口导出的属性，该属性必须有set权限
+            </summary>
+            <param name="pName">属性名称</param>
+            <param name="pValue">属性值</param>
+        </member>
+        <member name="T:Mock.Tools.Controls.ECheckBox">
+            <summary>
+            表示IE中的复选框按钮对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.ECheckBox.Check(System.String,System.String)">
+            <summary>
+            选中复选框
+            </summary>
+            <param name="WindowName">窗口名称</param>
+            <param name="CheckBoxName">复选框名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.ECheckBox.UnCheck(System.String,System.String)">
+            <summary>
+            取消选中复选框
+            </summary>
+            <param name="WindowName">窗口名称</param>
+            <param name="CheckBoxName">复选框名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.EWindow.Search(System.String)">
+            <summary>
+            搜索窗口
+            </summary>
+            <param name="windowName">窗口名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.EWindow.FindWindow(System.String,System.Int32)">
+            <summary>
+            查找窗口
+            </summary>
+            <param name="windowName">窗口名称</param>
+            <param name="waitMillionSecond">超时时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.EWindow.SetTopMost(System.String)">
+            <summary>
+            置顶窗口
+            </summary>
+            <param name="windowName">窗口名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.EWindow.SetMaximize(System.String)">
+            <summary>
+            最大化窗口
+            </summary>
+            <param name="windowName">窗口名称</param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WindowOpenEventHandler">
+            <summary>
+            表示窗口打开时的事件处理程序
+            </summary>
+            <param name="baseInfo"></param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WindowCloseEventHandler">
+            <summary>
+            表示窗口关闭时的事件处理程序
+            </summary>
+            <param name="baseInfo"></param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WindowBaseInfo">
+            <summary>
+            表示窗口的基本信息的对象
+            
+            2016.07.11 由 韩志强 生成
+            
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.WindowBaseInfo.WindowName">
+            <summary>
+            窗口名称
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.WindowBaseInfo.FriendlyName">
+            <summary>
+            窗口别名
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.WindowBaseInfo.AutomationId">
+            <summary>
+            Automation ID
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.WindowBaseInfo.ClassName">
+            <summary>
+            类名称
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.WindowBaseInfo.Handle">
+            <summary>
+            窗口句柄
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.WindowBaseInfo.OpenTime">
+            <summary>
+            打开时的时间
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.WindowBaseInfo.Type">
+            <summary>
+            类型ID
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.WindowBaseInfo.CloseTime">
+            <summary>
+            关闭时的时间
+            </summary>
+        </member>
+        <member name="P:Mock.Tools.Controls.WindowBaseInfo.RuntimeId">
+            <summary>
+            运行时唯一ID
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Controls.WButton">
+            <summary>
+            表示按钮对象操作类
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WButton.Click(System.String,System.String)">
+            <summary>
+            表示点击按钮操作
+            </summary>
+            <param name="windowName">按钮所在窗口名称</param>
+            <param name="buttonName">按钮名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WButton.ClickByMouse(System.String,System.String)">
+            <summary>
+            表示点击按钮操作
+            </summary>
+            <param name="windowName">按钮所在窗口名称</param>
+            <param name="buttonName">按钮名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WButton.Exist(System.String,System.String)">
+            <summary>
+            查看按钮是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="buttonName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.WComboBox">
+            <summary>
+            表示组合框操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WComboBox.Select(System.String,System.String,System.String)">
+            <summary>
+            选择组合框中的指定项
+            </summary>
+            <param name="windowName">组合框所在窗口名称</param>
+            <param name="comboxName">组合框名称</param>
+            <param name="itemName">要选择的项名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WComboBox.Exist(System.String,System.String)">
+            <summary>
+            查看组合框是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="comboxName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WComboBox.Exist(System.String,System.String,System.String)">
+            <summary>
+            查看组合框是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="comboxName"></param>
+            <param name="itemName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.WEdit">
+            <summary>
+            表示输入框操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WEdit.Input(System.String,System.String,System.String)">
+            <summary>
+            向输入框中输入文本
+            </summary>
+            <param name="windowName">输入框所在窗口名称</param>
+            <param name="inputName">输入框名称</param>
+            <param name="value">输入的值</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WEdit.Click(System.String,System.String)">
+            <summary>
+            点击输入框操作
+            </summary>
+            <param name="windowName">输入框所在的窗口名称</param>
+            <param name="inputName">输入框名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WEdit.Exist(System.String,System.String)">
+            <summary>
+            查看输入框是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="inputName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WEdit.GetValue(System.String,System.String)">
+            <summary>
+            获取输入框中的文本
+            </summary>
+            <param name="windowName"></param>
+            <param name="inputName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.WOpenSaveFileDialog">
+            <summary>
+            表示打开/保存对话框操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WOpenSaveFileDialog.SetFilePath(System.String,System.String,System.String)">
+            <summary>
+            输入打开/保存对话框路径操作
+            </summary>
+            <param name="parentWindowName">父窗体名称</param>
+            <param name="windowName">窗口名称</param>
+            <param name="path">路径</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WOpenSaveFileDialog.Click(System.String,System.String,System.String)">
+            <summary>
+            点击打开/保存对话框中按钮操作
+            </summary>
+            <param name="parentWindowName">父窗体名称</param>
+            <param name="windowName">窗口名称</param>
+            <param name="buttonName">按钮名称</param>
+        </member>
+        <member name="T:Mock.Tools.Controls.HxDialog">
+            <summary>
+            表示航信定制的对话框对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.HxDialog.Message">
+            <summary>
+            对话框中的描述信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.HxDialog.Click(System.String)">
+            <summary>
+            点击对话框中指定名称的按钮
+            </summary>
+            <param name="buttonName">按钮名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.HxDialog.Click(System.Boolean)">
+            <summary>
+            点击对话框中指定名称的按钮
+            </summary>
+            <param name="ok">按钮名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.HxDialog.Exist(System.Int32)">
+            <summary>
+            检测指定窗体的子窗体中是否存在航信定制的对话框
+            </summary>
+            <param name="TimeOut">超时时间</param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.HxMessageBox">
+            <summary>
+            表示航信定制的消息框对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.HxMessageBox.Close(System.String)">
+            <summary>
+            关闭消息框
+            </summary>
+            <param name="parentName">父窗体名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.HxMessageBox.Exists(System.String,System.Int32)">
+            <summary>
+            检测指定窗体的子窗体中是否存在航信定制的消息框
+            </summary>
+            <param name="parentName">父窗体名称</param>
+            <param name="TimeOut">超时时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.HxMessageBox.EventDescription(System.String)">
+            <summary>
+            消息框中的事件描述信息
+            </summary>
+            <param name="parentName">父窗体名称</param>
+            <returns>事件描述信息</returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.HxMessageBox.Click(System.String,System.String)">
+            <summary>
+            点击消息框中的按钮
+            </summary>
+            <param name="buttonName">按钮名称</param>
+            <param name="parentName">父窗体名称</param>
+        </member>
+        <member name="T:Mock.Tools.Controls.Keybord">
+            <summary>
+            表示键盘对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.Keybord.Input(System.String)">
+            <summary>
+            模拟键盘输入字符串
+            </summary>
+            <param name="s">输入的字符串</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.Keybord.KeyDown(Mock.Data.VK)">
+            <summary>
+            按下指定键
+            </summary>
+            <param name="vk">虚拟键值</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.Keybord.KeyUp(Mock.Data.VK)">
+            <summary>
+            弹起指定键
+            </summary>
+            <param name="vk">虚拟键值</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.Keybord.Press(Mock.Data.VK)">
+            <summary>
+            敲击指定键
+            </summary>
+            <param name="vk"></param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WMenuBar">
+            <summary>
+            表示菜单栏操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMenuBar.Click(System.String,System.String,System.String)">
+            <summary>
+            点击菜单栏操作
+            </summary>
+            <param name="windowName">菜单栏所在窗口名称</param>
+            <param name="menuBarName">菜单栏名称</param>
+            <param name="ItemName">要点击的菜单项名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMenuBar.Click(System.String,System.String,System.String[])">
+            <summary>
+            点击菜单栏操作
+            </summary>
+            <param name="windowName"></param>
+            <param name="menuBarName"></param>
+            <param name="ItemNameArray"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMenuBar.Exist(System.String,System.String)">
+            <summary>
+            查看菜单栏是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="menuBarName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.MonthCalender">
+            <summary>
+            表示日历控件操作
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.MonthCalender.NextMonth(System.String)">
+            <summary>
+            设置日历控件到下个月
+            </summary>
+            <param name="windowName">日历控件所在窗体名称</param>
+        </member>
+        <member name="T:Mock.Tools.Controls.Mouse">
+            <summary>
+            鼠标对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.Mouse.Click(System.Int32,System.Int32)">
+            <summary>
+            左键单击(x, y)点
+            </summary>
+            <param name="x">单击点的X坐标</param>
+            <param name="y">单击点的Y坐标</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.Mouse.DbClick(System.Int32,System.Int32)">
+            <summary>
+            左键双击(x, y)点
+            </summary>
+            <param name="x">双击点的X坐标</param>
+            <param name="y">双击点的Y坐标</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.Mouse.RightClick(System.Int32,System.Int32)">
+            <summary>
+            右键单击(x, y)点
+            </summary>
+            <param name="x">单击点的X坐标</param>
+            <param name="y">单击点的Y坐标</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.Mouse.Move(System.Int32,System.Int32)">
+            <summary>
+            移动鼠标指针到(x, y)点
+            </summary>
+            <param name="x">移动到点的X坐标</param>
+            <param name="y">移动到点的Y坐标</param>
+        </member>
+        <member name="P:Mock.Tools.Controls.Mouse.Position">
+            <summary>
+            获取鼠标的当前坐标
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Controls.WPopMenu">
+            <summary>
+            表示弹出菜单操作对象
+            </summary>
+            <summary>
+            表示弹出菜单操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPopMenu.Click(System.String,System.String)">
+            <summary>
+            点击弹出菜单操作
+            </summary>
+            <param name="windowName">弹出菜单所在窗口名称</param>
+            <param name="menuName">菜单项名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPopMenu.Exist(System.String)">
+            <summary>
+            查看弹出菜单是否存在
+            </summary>
+            <param name="windowName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPopMenu.DbClick(System.String,System.String)">
+            <summary>
+            鼠标左键双击菜单子项
+            </summary>
+            <param name="windowName"></param>
+            <param name="itemName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPopMenu.TreeUnit.Select(System.String,System.String)">
+            <summary>
+            选择树节点
+            </summary>
+            <param name="windowName"></param>
+            <param name="itemName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPopMenu.TreeUnit.DbClick(System.String,System.String)">
+            <summary>
+            双击树节点
+            </summary>
+            <param name="windowName"></param>
+            <param name="itemName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPopMenu.TreeUnit.Collapse(System.String,System.String)">
+            <summary>
+            折叠树节点
+            </summary>
+            <param name="windowName"></param>
+            <param name="itemName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPopMenu.TreeUnit.Expand(System.String,System.String)">
+            <summary>
+            展开树节点
+            </summary>
+            <param name="windowName"></param>
+            <param name="itemName"></param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WCheckBox">
+            <summary>
+            表示复选框操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WCheckBox.Check(System.String,System.String)">
+            <summary>
+            选择复选框操作
+            </summary>
+            <param name="windowName">复选框所在窗口名称</param>
+            <param name="checkBoxName">复选框名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WCheckBox.UnCheck(System.String,System.String)">
+            <summary>
+            取消选择复选框操作
+            </summary>
+            <param name="windowName">复选框所在窗口名称</param>
+            <param name="checkBoxName">复选框名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WCheckBox.Indeterminate(System.String,System.String)">
+            <summary>
+            设置复选框到不确定状态操作
+            </summary>
+            <param name="windowName">复选框所在窗口名称</param>
+            <param name="checkBoxName">复选框名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WCheckBox.Exist(System.String,System.String)">
+            <summary>
+            指示复选框是否存在
+            </summary>
+            <param name="windowName">复选框所在窗口名称</param>
+            <param name="checkBoxName">复选框名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.WMessageBox">
+            <summary>
+            表示windows提示框操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Click(System.String,System.String)">
+            <summary>
+            点击提示框中的按钮操作
+            </summary>
+            <param name="messageboxName"></param>
+            <param name="buttonName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Click(System.Int32,System.String,System.String)">
+            <summary>
+            点击提示框中的按钮操作
+            </summary>
+            <param name="pId"></param>
+            <param name="messageboxName"></param>
+            <param name="buttonName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Click(System.String)">
+            <summary>
+            点击提示框中的按钮操作
+            </summary>
+            <param name="buttonName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Click(System.Int32,System.String)">
+            <summary>
+            点击提示框中的按钮操作
+            </summary>
+            <param name="pId"></param>
+            <param name="buttonName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Click(System.Boolean)">
+            <summary>
+            点击提示框中的按钮操作
+            </summary>
+            <param name="ok">肯定意义的按钮</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Click(System.Int32,System.Boolean)">
+            <summary>
+            点击提示框中的按钮操作
+            </summary>
+            <param name="pId"></param>
+            <param name="ok">肯定意义的按钮</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Message(System.String)">
+            <summary>
+            获取提示框中提示文本操作
+            </summary>
+            <param name="messageboxName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Message(System.Int32,System.String)">
+            <summary>
+            获取提示框中提示文本操作
+            </summary>
+            <param name="pId"></param>
+            <param name="messageboxName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Exist(System.String,System.Int32)">
+            <summary>
+            检测提示框是否存在操作
+            </summary>
+            <param name="messageboxName"></param>
+            <param name="millionSecondTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Exist(System.Int32,System.String,System.Int32)">
+            <summary>
+            检测提示框是否存在操作
+            </summary>
+            <param name="messageboxName"></param>
+            <param name="pId"></param>
+            <param name="millionSecondTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Close(System.String)">
+            <summary>
+            关闭提示框操作
+            </summary>
+            <param name="messageboxName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WMessageBox.Close(System.Int32,System.String)">
+            <summary>
+            关闭提示框操作
+            </summary>
+            <param name="messageboxName"></param>
+            <param name="pId"></param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WPanel">
+            <summary>
+            表示面板操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPanel.Click(System.String,System.String)">
+            <summary>
+            点击面板
+            </summary>
+            <param name="windowName"></param>
+            <param name="panelName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPanel.Click(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            点击面板
+            </summary>
+            <param name="windowName"></param>
+            <param name="panelName"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPanel.SetFocus(System.String,System.String)">
+            <summary>
+            设置面板焦点
+            </summary>
+            <param name="windowName"></param>
+            <param name="panelName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPanel.GetText(System.String,System.String)">
+            <summary>
+            获取面板文本
+            </summary>
+            <param name="windowName"></param>
+            <param name="panelName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPanel.Input(System.String,System.String,System.String)">
+            <summary>
+            面板中输入
+            </summary>
+            <param name="windowName"></param>
+            <param name="panelName"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WPanel.Exist(System.String,System.String)">
+            <summary>
+            查看Panel是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="panelName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.WRadioButton">
+            <summary>
+            表示单选按钮操作兑现
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WRadioButton.Select(System.String,System.String)">
+            <summary>
+            选择单选按钮操作
+            </summary>
+            <param name="windowName">窗口名称</param>
+            <param name="radioButtonName">单选按钮名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WRadioButton.Exist(System.String,System.String)">
+            <summary>
+            查看单选按钮是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="radioButtonName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.WStatusBar">
+            <summary>
+            表示状态栏操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WStatusBar.getItemValue(System.String,System.Int32,System.String)">
+            <summary>
+            获取状态栏信息操作
+            </summary>
+            <param name="windowName">窗口名称</param>
+            <param name="index">序号</param>
+            <param name="statusBarName">状态栏名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WStatusBar.Exist(System.String,System.String)">
+            <summary>
+            查看菜单栏是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="statusBarName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.WTab">
+            <summary>
+            表示选项卡操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTab.Select(System.String,System.String,System.String)">
+            <summary>
+            选择标签页操作
+            </summary>
+            <param name="windowName">窗口名称</param>
+            <param name="tabName">选项卡控件名称</param>
+            <param name="ItemName">标签页名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTab.Exist(System.String,System.String)">
+            <summary>
+            查看选项卡控件是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="tabName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTab.Exist(System.String,System.String,System.String)">
+            <summary>
+            查看选项卡标签页是否存在
+            </summary>
+            <param name="windowName">窗口名称</param>
+            <param name="tabName">选项卡名称</param>
+            <param name="itemName">标签页名称</param>
+            <returns>存在返回 True， 否则返回 False</returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.WTable">
+            <summary>
+            表示表格控件对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.Input(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            向表格中指定单元格输入数据
+            </summary>
+            <param name="WindowName">表格所在窗口名称</param>
+            <param name="TableName">表格名称</param>
+            <param name="ColumnName">单元格列名称</param>
+            <param name="Value">输入的数据</param>
+            <param name="RowIndex">表格所在行索引（不输入或输入0为最后一行）</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.Select(System.String,System.String,System.Int32)">
+            <summary>
+            选择表格的指定行
+            </summary>
+            <param name="windowName">表格所在窗口名称</param>
+            <param name="TableName">表格名称</param>
+            <param name="rowIndex">选择的行索引（不输入或输入0为最后一行）</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.Select(System.String,System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            选择表格的指定行
+            </summary>
+            <param name="windowName">表格所在窗口名称</param>
+            <param name="TableName">表格名称</param>
+            <param name="indexList">选择的行索引列表</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.HasColumn(System.String,System.String,System.String)">
+            <summary>
+            查询表格中是否包含指定名称的列
+            </summary>
+            <param name="windowName">表格所在窗口名称</param>
+            <param name="TableName">表格名称</param>
+            <param name="columnName">列名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.GetRowIndex(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            根据指定的条件查找数据在表格中的位置
+            </summary>
+            <param name="windowName">表格所在窗体名称</param>
+            <param name="TableName">表格名称</param>
+            <param name="condition">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.Exist(System.String,System.String)">
+            <summary>
+            查看表格是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="TableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.GetContent(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取表格数据
+            </summary>
+            <param name="windowName">窗口名称</param>
+            <param name="tableName">表格名称</param>
+            <param name="rowIndex">从1开始的行号</param>
+            <param name="columnIndex">列名</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.GetContent(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            获取表格数据
+            </summary>
+            <param name="windowName">窗口名称</param>
+            <param name="tableName">表格名称</param>
+            <param name="rowIndex">从1开始的行号</param>
+            <param name="columnName">列名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.RowCount(System.String,System.String)">
+            <summary>
+            获取表格数据总行数
+            </summary>
+            <param name="windowName">窗口名称</param>
+            <param name="tableName">表格名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.GetContent(System.String,System.String)">
+            <summary>
+            获取表格内容
+            </summary>
+            <param name="windowName">表格所在窗口名称</param>
+            <param name="tableName">表格别名</param>
+            <returns>表格内容</returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.Click(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            点击制定单元格
+            </summary>
+            <param name="WindowName">表格所在窗口名称</param>
+            <param name="TableName">表格名称</param>
+            <param name="ColumnName">单元格列名称</param>
+            <param name="RowIndex">表格所在行索引（不输入或输入0为最后一行）</param>
+            <param name="x">相对于表格左上角的X偏移，如果ColumnName为null，则相对于整行的左上角</param>
+            <param name="y">相对于表格左上角的Y偏移，如果ColumnName为null，则相对于整行的左上角</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.Click(System.String,System.String,System.String,System.Collections.Generic.List{System.Int32},System.Int32,System.Int32)">
+            <summary>
+            点击制定单元格
+            </summary>
+            <param name="WindowName">表格所在窗口名称</param>
+            <param name="TableName">表格名称</param>
+            <param name="ColumnName">单元格列名称</param>
+            <param name="RowIndexList">表格所在行索引（不输入或输入0为最后一行）</param>
+            <param name="x">相对于表格左上角的X偏移，如果ColumnName为null，则相对于整行的左上角</param>
+            <param name="y">相对于表格左上角的Y偏移，如果ColumnName为null，则相对于整行的左上角</param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WTable.EditUnit">
+            <summary>
+            表示表格中带编辑框的单元格控件
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.EditUnit.Input(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            向表格中的编辑框控件输入信息
+            </summary>
+            <param name="WindowName">表格所在窗口名称</param>
+            <param name="TableName">表格名称</param>
+            <param name="ColumnName">单元格所在列名称</param>
+            <param name="Value">要输入的值</param>
+            <param name="RowIndex">单元格所在行索引（不输入或输入0为最后一行）</param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WTable.ComboBoxUnit">
+            <summary>
+            表示表格中的下拉框控件
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTable.ComboBoxUnit.Select(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            选择表格中的下拉框控件的子项
+            </summary>
+            <param name="WindowName">表格所在窗口名称</param>
+            <param name="TableName">表格名称</param>
+            <param name="ColumnName">单元格所在列名称</param>
+            <param name="comboxItemValue">要选择的下拉框子项</param>
+            <param name="RowIndex">单元格所在行索引（不输入或输入0为最后一行）</param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WText">
+            <summary>
+            表示标签操作对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WText.GetValue(System.String,System.String)">
+            <summary>
+            获取标签文本操作
+            </summary>
+            <param name="windowName"></param>
+            <param name="textName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WText.Exist(System.String,System.String)">
+            <summary>
+            判断标签控件是否存在
+            </summary>
+            <param name="windowName"></param>
+            <param name="textName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Mock.Tools.Controls.WToolBar">
+            <summary>
+            表示工具栏控件
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WToolBar.Click(System.String,System.String,System.String)">
+            <summary>
+            工具栏控件的点击事件
+            </summary>
+            <param name="WindowName">工具栏所属窗体名称</param>
+            <param name="ToolBarName">工具栏名称</param>
+            <param name="ItemName">工具栏选项名称</param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WTree">
+            <summary>
+            表示树控件对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTree.Select(System.String,System.String,System.String)">
+            <summary>
+            选择树节点
+            </summary>
+            <param name="windowName"></param>
+            <param name="treeName"></param>
+            <param name="itemName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTree.DbClick(System.String,System.String,System.String)">
+            <summary>
+            双击树节点
+            </summary>
+            <param name="windowName"></param>
+            <param name="treeName"></param>
+            <param name="itemName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTree.Collapse(System.String,System.String,System.String)">
+            <summary>
+            折叠树节点
+            </summary>
+            <param name="windowName"></param>
+            <param name="treeName"></param>
+            <param name="itemName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WTree.Expand(System.String,System.String,System.String)">
+            <summary>
+            展开树节点
+            </summary>
+            <param name="windowName"></param>
+            <param name="treeName"></param>
+            <param name="itemName"></param>
+        </member>
+        <member name="T:Mock.Tools.Controls.WWindow">
+            <summary>
+            表示Windows系统中的窗口对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.SearchWindow(System.String)">
+            <summary>
+            搜索窗口
+            </summary>
+            <param name="windowName">窗口名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.SetTopMost(System.String)">
+            <summary>
+            置顶窗口
+            </summary>
+            <param name="windowName">窗口名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.FindWindow(System.String,System.Int32)">
+            <summary>
+            查找窗口
+            </summary>
+            <param name="windowName">窗口名称</param>
+            <param name="waitMillionSecond">超时时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.Disappear(System.String,System.Int32)">
+            <summary>
+            检查窗口关闭
+            </summary>
+            <param name="windowName"></param>
+            <param name="waitMillionSecond"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.CloseTo(System.String)">
+            <summary>
+            关闭窗口到指定窗口
+            </summary>
+            <param name="windowName">窗口名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.Close(System.String)">
+            <summary>
+            关闭窗口
+            </summary>
+            <param name="windowName">窗口名称</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.Listen">
+            <summary>
+            开启窗口监听
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.Click(System.String,System.String)">
+            <summary>
+            点击窗口上的子控件
+            不建议使用该方法
+            </summary>
+            <param name="windowName"></param>
+            <param name="elementName"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.AddWindowOpenEvent(Mock.Tools.Controls.WindowOpenEventHandler)">
+            <summary>
+            添加窗口打开事件的监听
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.AddWindowCloseEvent(Mock.Tools.Controls.WindowCloseEventHandler)">
+            <summary>
+            添加窗口关闭事件的监听
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.RemoveWindowOpenEvent(Mock.Tools.Controls.WindowOpenEventHandler)">
+            <summary>
+            移除窗口打开事件的监听
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.RemoveWindowCloseEvent(Mock.Tools.Controls.WindowCloseEventHandler)">
+            <summary>
+            移除窗口关闭事件的监听
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WWindow.StopFindWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Mock.Data.Exception.CanNotFindFileException">
+            <summary>
+            表示找不到文件的异常
+            </summary>
+        </member>
+        <member name="M:Mock.Data.Exception.CanNotFindFileException.#ctor(System.String)">
+            <summary>
+            无法找到指定路径的文件时抛出此异常
+            </summary>
+            <param name="fileName">文件名（包含路径）</param>
+        </member>
+        <member name="T:Mock.Tools.Exception.CanNotFindNodeException">
+            <summary>
+            无法找到节点时触发此异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.CanNotFindNodeException.#ctor(System.String,System.String)">
+            <summary>
+            构造无法找到节点异常的新实例
+            </summary>
+            <param name="xmlName"></param>
+            <param name="nodeName"></param>
+        </member>
+        <member name="M:Mock.Tools.Exception.CanNotFindNodeException.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            构造无法找到节点异常的新实例
+            </summary>
+            <param name="xmlName"></param>
+            <param name="nodeName"></param>
+            <param name="nodeId"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.ControlUnableException">
+            <summary>
+            控件无法操作时触发此异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.ControlUnableException.#ctor(System.String)">
+            <summary>
+            构造控件无法操作异常的新实例
+            </summary>
+            <param name="controlName"></param>
+        </member>
+        <member name="M:Mock.Tools.Exception.ControlUnableException.#ctor(System.String,System.String)">
+            <summary>
+            构造控件无法操作异常的新实例
+            </summary>
+            <param name="windowName"></param>
+            <param name="controlName"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.InvalidInputException">
+            <summary>
+            无效输入异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.InvalidInputException.#ctor(System.String)">
+            <summary>
+            构造无效输入异常的新实例
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.InvalidTypeException">
+            <summary>
+            无效类型异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.InvalidTypeException.#ctor(System.String)">
+            <summary>
+            构造无效类型异常的新实例
+            </summary>
+            <param name="typeName"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.SoftwareNotStartExctption">
+            <summary>
+            软件未启动异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.SoftwareNotStartExctption.#ctor(System.String)">
+            <summary>
+            构造软件未启动异常的新实例
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.MultiControlException">
+            <summary>
+            多个控件同时存在时触发此异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.MultiControlException.#ctor(System.String)">
+            <summary>
+            构造多个控件同时存在异常的新实例
+            </summary>
+            <param name="controlName"></param>
+        </member>
+        <member name="M:Mock.Tools.Exception.MultiControlException.#ctor(System.String,System.String)">
+            <summary>
+            构造多个控件同时存在异常的新实例
+            </summary>
+            <param name="parentName"></param>
+            <param name="controlName"></param>
+        </member>
+        <member name="M:Mock.Tools.Exception.MultiControlException.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造多个控件同时存在异常的新实例
+            </summary>
+            <param name="parentName"></param>
+            <param name="controlName"></param>
+            <param name="itemName"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.NullConditionException">
+            <summary>
+            条件为空异常
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Exception.NullControlException">
+            <summary>
+            控件为空异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.NullControlException.#ctor(System.String)">
+            <summary>
+            构造控件为空异常的新实例
+            </summary>
+            <param name="controlName"></param>
+        </member>
+        <member name="M:Mock.Tools.Exception.NullControlException.#ctor(System.String,System.String)">
+            <summary>
+            构造控件为空异常的新实例
+            </summary>
+            <param name="windowName"></param>
+            <param name="controlName"></param>
+        </member>
+        <member name="M:Mock.Tools.Exception.NullControlException.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造控件为空异常的新实例
+            </summary>
+            <param name="windowName"></param>
+            <param name="elementName"></param>
+            <param name="controlName"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.TaxCardOperationException">
+            <summary>
+            表示组件接口操作异常对象
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.TaxCardOperationException.#ctor(System.String)">
+            <summary>
+            构造组件接口操作异常的新实例
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.TimeOutException">
+            <summary>
+            操作超时错误
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.TimeOutException.#ctor(System.String)">
+            <summary>
+            构造操作超时异常的新实例
+            </summary>
+            <param name="opName"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.UnClickableException">
+            <summary>
+            无法点击异常
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Exception.UnExpectedException">
+            <summary>
+            未知异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.UnExpectedException.#ctor(System.Exception)">
+            <summary>
+            构造未知异常的新实例
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.UnSupportPatternException">
+            <summary>
+            操作模式不支持异常
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Exception.WarningWindowExistException">
+            <summary>
+            表示存在警告窗口时操作非警告窗口时触发此异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.WarningWindowExistException.#ctor">
+            <summary>
+            构造存在警告窗口异常的新实例
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Exception.WindowCanNotMaximizeException">
+            <summary>
+            窗口无法最大化异常
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Exception.WindowIsInactiveException">
+            <summary>
+            非活动窗口异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.WindowIsInactiveException.#ctor(System.String)">
+            <summary>
+            非活动窗口异常
+            </summary>
+            <param name="windowName">窗口名称</param>
+        </member>
+        <member name="T:Mock.Tools.Exception.WindowNoResponseException">
+            <summary>
+            窗口无响应异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.WindowNoResponseException.#ctor(System.String)">
+            <summary>
+            构造窗口无响应异常的新实例
+            </summary>
+            <param name="windowName"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.HttpRequestFailedException">
+            <summary>
+            Http 请求发送失败异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.HttpRequestFailedException.#ctor(System.String,System.String)">
+            <summary>
+            构造Http 请求发送失败异常的新实例
+            </summary>
+            <param name="code"></param>
+            <param name="description"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.WebServiceUrlFormatErrorException">
+            <summary>
+            WebService请求URL格式异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.WebServiceUrlFormatErrorException.#ctor(System.String)">
+            <summary>
+            构造WebService请求URL格式异常的新实例
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.InvalidWebServiceRequestException">
+            <summary>
+            非法调用WebService异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.InvalidWebServiceRequestException.#ctor(System.String)">
+            <summary>
+            构造非法调用WebService异常的新实例
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.HttpPreviewPostCanceledException">
+            <summary>
+            操作超时错误
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.HttpPreviewPostCanceledException.#ctor">
+            <summary>
+            构造操作超时异常的新实例
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Exception.CanNotGetPropertyException">
+            <summary>
+            未知异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.CanNotGetPropertyException.#ctor(System.String)">
+            <summary>
+            构造未知异常的新实例
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="T:Mock.Tools.Exception.UnSupportOperationException">
+            <summary>
+            操作模式不支持异常
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Exception.ProgramAbortException">
+            <summary>
+            窗口无响应异常
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Exception.ProgramAbortException.#ctor">
+            <summary>
+            构造窗口无响应异常的新实例
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Tasks.TaskIsRunningException">
+            <summary>
+            操作超时错误
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Tasks.TaskIsRunningException.#ctor">
+            <summary>
+            构造操作超时异常的新实例
+            </summary>
+        </member>
+        <member name="F:Mock.Tools.Tasks.TaistTaskType.CONCURRENCY">
+            <summary>
+            并行执行
+            </summary>
+        </member>
+        <member name="F:Mock.Tools.Tasks.TaistTaskType.REPEAT">
+            <summary>
+            重复执行
+            </summary>
+        </member>
+        <member name="F:Mock.Tools.Tasks.TaistTaskType.ATTEMP">
+            <summary>
+            尝试执行
+            </summary>
+        </member>
+        <member name="F:Mock.Tools.Tasks.TaistTaskType.COMPETE">
+            <summary>
+            竞争执行
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Tasks.TaistTaskCollection.Concurrency">
+            <summary>
+            并行执行
+            </summary>
+        </member>
+        <member name="T:Mock.Tools.Tasks.RunTaskException">
+            <summary>
+            运行任务错误
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Tasks.RunTaskException.#ctor(System.String)">
+            <summary>
+            构造运行任务异常的新实例
+            </summary>
+        </member>
+        <member name="M:Mock.Tools.Tasks.RunTaskException.#ctor(System.Exception)">
+            <summary>
+            构造运行任务异常的新实例
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WebServiceObject.CallFunction(System.String,System.Object[])">
+            <summary>
+            调用COM接口导出的方法
+            </summary>
+            <param name="fName">方法名称</param>
+            <param name="args">参数数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WebServiceObject.getProperty(System.String)">
+            <summary>
+            获取COM接口导出的属性值，该属性必须有get权限
+            </summary>
+            <param name="pName">属性名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mock.Tools.Controls.WebServiceObject.setProperty(System.String,System.Object)">
+            <summary>
+            设置COM接口导出的属性，该属性必须有set权限
+            </summary>
+            <param name="pName">属性名称</param>
+            <param name="pValue">属性值</param>
+        </member>
+        <member name="M:Mock.Tools.Controls.WebServiceObject.Dispose">
+            <summary>
+            释放COM对象
+            </summary>
+        </member>
+    </members>
+</doc>

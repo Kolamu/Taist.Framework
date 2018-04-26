@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='gbk' ?>
+<Environment>
+	<ConnectionString name="DBName">
+		<Host></Host>
+		<Port></Port>
+		<User></User>
+		<Password></Password>
+		<DatabaseName></DatabaseName>
+	</ConnectionString>
+</Environment>

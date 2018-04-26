@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="GBK" ?>
+<Data> 
+ <TestCase>
+  <Bh>CT00001</Bh>
+  <CaseName>成功用例</CaseName>
+  <CaseId>UCSEC1</CaseId>
+  <Description>一个步骤、无验证点、执行成功</Description>
+  <Step id="1">
+   <Name>成功的步骤</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>R001</DataList>
+  </Step>
+ </TestCase>
+<TestCase Repeat="5">
+  <Bh>CT00002</Bh>
+  <CaseName>成功重复执行用例</CaseName>
+  <CaseId>UCSEC2</CaseId>
+  <Description>单个步骤重复执行5次</Description>
+  <Step id="1">
+   <Name>单机版发票填开</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>R001</DataList>
+  </Step>
+ </TestCase>
+ <TestCase>
+  <Bh>CT00003</Bh>
+  <CaseName>成功用例</CaseName>
+  <CaseId>UCSEC1</CaseId>
+  <Description>三个步骤、无验证点、执行成功</Description>
+  <Step id="1">
+   <Name>成功的步骤</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>R001</DataList>
+  </Step>
+  <Step id="2">
+   <Name>成功的步骤</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>R001</DataList>
+  </Step>
+  <Step id="3">
+   <Name>成功的步骤</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>R001</DataList>
+  </Step>
+ </TestCase>
+ <TestCase>
+  <Bh>CT00004</Bh>
+  <CaseName>中途失败的用例</CaseName>
+  <CaseId>UCSEC1</CaseId>
+  <Description>第一步成功、第二步失败，第三步不执行</Description>
+  <Step id="1">
+   <Name>成功的步骤</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>R001</DataList>
+  </Step>
+  <Step id="2">
+   <Name>失败的步骤</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>W001</DataList>
+  </Step>
+ </TestCase>
+ <TestCase Repeat="3">
+  <Bh>CT00005</Bh>
+  <CaseName>循环失败的用例</CaseName>
+  <CaseId>UCSEC1</CaseId>
+  <Description>第一步成功、第二步失败、循环两次，只执行第一次循环</Description>
+  <Step id="1">
+   <Name>成功的步骤</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>R001</DataList>
+  </Step>
+  <Step id="2">
+   <Name>失败的步骤</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>W001</DataList>
+  </Step>
+ </TestCase>
+ <TestCase>
+  <Bh>CT00006</Bh>
+  <CaseName>循环失败的用例</CaseName>
+  <CaseId>UCSEC1</CaseId>
+  <Description>第一步成功、第二步失败、循环两次，只执行第一次循环</Description>
+  <Step id="1">
+   <Name>成功的步骤</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>R001</DataList>
+  </Step>
+  <Step id="2">
+   <Name>用例的步骤</Name>
+   <Keyword>CT00001</Keyword>
+  </Step>
+ </TestCase>
+ <TestCase>
+  <Bh>CT00007</Bh>
+  <CaseName>循环失败的用例</CaseName>
+  <CaseId>UCSEC1</CaseId>
+  <Description>第一步成功、第二步失败、循环两次，只执行第一次循环</Description>
+  <Step id="1">
+   <Name>成功的步骤</Name>
+   <Keyword>FTEST</Keyword>
+   <DataList>R001</DataList>
+  </Step>
+  <Step id="2">
+   <Name>用例的步骤</Name>
+   <Keyword>CT00004</Keyword>
+  </Step>
+ </TestCase>
+ <TestCase>
+  <Bh>CT00008</Bh>
+  <CaseName>用例编号做关键字成功用例</CaseName>
+  <CaseId>UCSEC8</CaseId>
+  <Description>以用例编号作为关键字</Description>
+  <Step id="1">
+   <Name>成功用例</Name>
+   <Keyword>CT00001</Keyword>
+  </Step>
+ </TestCase>
+ <TestCase>
+  <Bh>CT00009</Bh>
+  <CaseName>用例编号做关键字失败用例</CaseName>
+  <CaseId>UCSEC9</CaseId>
+  <Description>以用例编号作为关键字</Description>
+  <Step id="1">
+   <Name>失败用例</Name>
+   <Keyword>CT00005</Keyword>
+  </Step>
+  <Step id="2">
+  	<Name>成功用例</Name>
+  </Step>
+ </TestCase>
+</Data>

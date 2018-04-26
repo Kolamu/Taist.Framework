@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<Data>
+ <FormatValue>
+    <KeyName>Number</KeyName>
+    <KeyName>Num</KeyName>
+    <FormatType>PATTERN</FormatType>
+    <Pattern>F2</Pattern>
+  </FormatValue>
+  <FormatValue>
+    <KeyName>Boolean</KeyName>
+    <FormatType>SEMANTIC</FormatType>
+    <True>1</True>
+    <Y>1</Y>
+    <N>0</N>
+    <False>0</False>
+  </FormatValue>
+
+  <FormatValue>
+    <KeyName>STRING</KeyName> 
+    <FormatType>RIGHTFILLING</FormatType>
+    <DefaultChar>0</DefaultChar>
+    <FormatLength>20</FormatLength> 
+  </FormatValue>
+</Data>
+
+
+
+
+
+</Data>

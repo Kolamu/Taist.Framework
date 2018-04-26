@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainPage" xml:space="preserve">
+    <value>&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta http-equiv="Content-Type" content="text/html; charset=gbk" /&gt;
+		&lt;title&gt;自动化测试管理页面&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;form id="starttest" method="post" action="/StartTest"&gt;
+			&lt;textarea rows="3" cols="20" id="bhs" name="bhs"&gt;&lt;/textarea&gt;
+		&lt;/form&gt;
+		&lt;a onclick="document.getElementById('starttest').submit(); return false;" href=''&gt;开始测试&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+		&lt;a onclick="document.getElementById('stoptest').submit(); return false;" href=''&gt;结束测试&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+		&lt;a onclick="document.getElementById('viewschedule').submit(); return false;" href=''&gt;查看进度&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+		&lt;a onclick="document.getElementById('viewlog').submit(); return false;" href=''&gt;查看日志&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+		&lt;a onclick="document.getElementById('viewcache').submit(); return false;" href=''&gt;查看缓存&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+		&lt;a onclick="document.getElementById('dellog').submit(); return false;" href=''&gt;删除日志&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+		&lt;a onclick="document.getElementById('delcache').submit(); return false;" href=''&gt;删除缓存&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+		&lt;a onclick="document.getElementById('update').submit(); return false;" href=''&gt;更新版本&lt;/a&gt;
+		
+		&lt;form id="stoptest" method="post" action="/StopTest"&gt;&lt;/form&gt;
+		&lt;form id="viewschedule" method="post" action="/ViewSchedule"&gt;&lt;/form&gt;
+		&lt;form id="viewlog" method="post" action="/ViewLog"&gt;&lt;/form&gt;
+		&lt;form id="viewcache" method="post" action="/ViewCache"&gt;&lt;/form&gt;
+		&lt;form id="dellog" method="post" action="/DeleteLog"&gt;&lt;/form&gt;
+		&lt;form id="delcache" method="post" action="/DeleteCache"&gt;&lt;/form&gt;
+		&lt;form id="update" method="post" action="/Update"&gt;&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="MessagePage" xml:space="preserve">
+    <value>&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta http-equiv="Content-Type" content="text/html; charset=gbk" /&gt;
+		&lt;title&gt;[title]&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;p&gt;
+			[message]
+		&lt;/p&gt;
+		&lt;div align="center" style="z-index:999; position:fixed; bottom:60; right:0; border:1px solid #000; padding:4px; background:#ccc" onclick="var h = document.documentElement.scrollHeight || document.body.scrollHeight; window.scrollTo(h,h);"&gt;底　部&lt;/div&gt;
+		&lt;div align="center" style="z-index:999; position:fixed; bottom:30; right:0; border:1px solid #000; padding:4px; background:#ccc" onclick="document.getElementById('gotomain').submit();"&gt;管理页&lt;/div&gt;
+		&lt;form id="gotomain" method="post" action="/Manage"&gt;&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="SchedulePage" xml:space="preserve">
+    <value>&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta http-equiv="Content-Type" content="text/html; charset=gbk" /&gt;
+		&lt;title&gt;当前测试进度&lt;/title&gt;
+		&lt;style type="text/css"&gt;
+		body
+			{
+				margin-left:auto;
+				margin-right:auto;
+				width:70%
+			}
+		
+		 #collectTable
+			{
+				margin:0 auto;
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+			  width:90%;
+			  border-collapse:collapse;
+			}
+		#collectTable caption
+			{
+				font-size:1.5em;
+				color:dark;
+				padding:30px;
+				text-align:left;
+			}
+		
+		#collectTable td, #collectTable th
+		  {
+			  font-size:1em;
+			  border:1px solid #98bf21;
+			  padding:3px 7px 2px 7px;
+			  text-align:center;
+		  }
+		
+		#collectTable th
+		  {
+			  font-size:1.1em;
+			  text-align:center;
+			  background-color:#A7C942;
+			  color:#ffffff;
+		  }
+		
+		#collectTable tr.alt td
+		  {
+			  background-color:#EAF2D3;
+		  }
+			
+	&lt;/style&gt;
+		&lt;script type="text/javascript"&gt;
+			function refreshPage()
+			{
+				document.getElementById('viewschedule').submit();
+			}
+			function init()
+			{
+				setTimeout("refreshPage();", 5000);
+			}
+			init();
+		&lt;/script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;Table id="collectTable"&gt;
+		&lt;caption&gt;进度信息&lt;/caption&gt;
+		&lt;tr&gt;
+			&lt;th&gt;序号&lt;/th&gt;
+			&lt;th&gt;名称&lt;/th&gt;
+			&lt;th&gt;值&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;用例总数&lt;/td&gt;
+			&lt;td&gt;[total]&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alt"&gt;
+			&lt;td&gt;2&lt;/td&gt;
+			&lt;td&gt;执行数量&lt;/td&gt;
+			&lt;td&gt;[runned]&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;3&lt;/td&gt;
+			&lt;td&gt;剩余数量&lt;/td&gt;
+			&lt;td&gt;[pending]&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alt"&gt;
+			&lt;td&gt;4&lt;/td&gt;
+			&lt;td&gt;成功数量&lt;/td&gt;
+			&lt;td&gt;[success]&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;5&lt;/td&gt;
+			&lt;td&gt;失败数量&lt;/td&gt;
+			&lt;td&gt;[fail]&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alt"&gt;
+			&lt;td&gt;6&lt;/td&gt;
+			&lt;td&gt;当前进度&lt;/td&gt;
+			&lt;td&gt;[curpercent]&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;7&lt;/td&gt;
+			&lt;td&gt;成功率&lt;/td&gt;
+			&lt;td&gt;[sucesspercent]&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alt"&gt;
+			&lt;td&gt;8&lt;/td&gt;
+			&lt;td&gt;开始时间&lt;/td&gt;
+			&lt;td&gt;[start]&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;9&lt;/td&gt;
+			&lt;td&gt;执行时间&lt;/td&gt;
+			&lt;td&gt;[end]&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/Table&gt;
+		&lt;div align="center" style="z-index:999; position:fixed; bottom:60; right:0; border:1px solid #000; padding:4px; background:#ccc" onclick="var h = document.documentElement.scrollHeight || document.body.scrollHeight; window.scrollTo(h,h);"&gt;底　部&lt;/div&gt;
+		&lt;div align="center" style="z-index:999; position:fixed; bottom:30; right:0; border:1px solid #000; padding:4px; background:#ccc" onclick="document.getElementById('gotomain').submit();"&gt;管理页&lt;/div&gt;
+		&lt;form id="gotomain" method="post" action="/Manage"&gt;&lt;/form&gt;
+		&lt;form id="viewschedule" method="post" action="/ViewSchedule" /&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+</root>

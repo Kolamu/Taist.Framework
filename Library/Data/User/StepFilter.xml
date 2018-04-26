@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='gbk' ?>
+<Data>
+	<Step>
+		<Keyword>关键字</Keyword>
+		<SubKeyword>二级关键字</SubKeyword>
+		<TargetProject>目标平台</TargetProject>
+		<MaxRepeatCount>最大执行次数</MaxRepeatCount>
+	</Step>
+</Data>
