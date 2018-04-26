@@ -51,7 +51,7 @@
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>外星人图标下载29.ico</ApplicationIcon>
+    <ApplicationIcon>Runner.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>
@@ -100,7 +100,7 @@
     <Compile Include="RunnerParameters.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="外星人图标下载29.ico" />
+    <Content Include="Runner.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

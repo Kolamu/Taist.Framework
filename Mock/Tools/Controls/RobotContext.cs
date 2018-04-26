@@ -14,7 +14,6 @@
     using Mock.Tools.Exception;
     using Mock.Tools.Tasks;
 
-
     public delegate void IgnoreWindowEventHandler(WindowBaseInfo windowBaseInfo);
     public class RobotContext
     {
