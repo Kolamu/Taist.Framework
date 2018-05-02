@@ -18,4 +18,4 @@ it has the following characteristics:
 - Soap Webservice Interface
 
 ## Contact
-You can follow our WeChat public number(Taist) or join our group of QQ(325702259).<br>
+You can follow our WeChat public number(Taist) or join our group of QQ(325702259) to learn more about the framework.<br>
