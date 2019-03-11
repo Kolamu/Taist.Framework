@@ -10,7 +10,7 @@ import Mock.Data.Xml.XmlDocument;
 import Mock.Data.Xml.XmlNode;
 import Mock.Exception.XmlFormatErrorException;
 /**
- * TestContext 主要负责记录测试过程中产生的临时对象
+ * TestContext 涓昏璐熻矗璁板綍娴嬭瘯杩囩▼涓骇鐢熺殑涓存椂瀵硅薄
  * 
  * @author Kolamu
  *
